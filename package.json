@@ -1,0 +1,20 @@
+{
+  "name": "morgiana",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "vite": "vite"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@vitejs/plugin-vue": "^5.0.4",
+    "@vue/compiler-sfc": "^3.4.25",
+    "less": "^4.2.0",
+    "typescript": "^5.4.5",
+    "vite": "^5.2.10",
+    "vue": "^3.4.25"
+  }
+}
