@@ -10,9 +10,10 @@
     "strict": true,
     "jsx": "preserve",
     "composite": true,
-    "noImplicitAny": false
+    "noImplicitAny": false,
+    
   },
-  "include": ["vite.config.ts"],
+  "include": ["vite.config.ts", "page/**/*.d.ts", "page/**/*.vue", "page/**/*.ts", "main.ts", "env.d.ts", "routes.ts"],
   //"include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
   "exclude": ["node_modules"]
 }

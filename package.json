@@ -4,17 +4,25 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "vite": "vite"
+    "start": "ts-node ./server/command/start.ts",
+    "dev:page": "vite",
+    "update": "ts-node ./server/command/update.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/inquirer": "8",
+    "@types/node": "^20.12.7",
     "@vitejs/plugin-vue": "^5.0.4",
     "@vue/compiler-sfc": "^3.4.25",
+    "inquirer": "8",
     "less": "^4.2.0",
+    "ts-morph": "^22.0.0",
+    "ts-node": "^10.9.2",
     "typescript": "^5.4.5",
     "vite": "^5.2.10",
-    "vue": "^3.4.25"
+    "vue": "^3.4.25",
+    "vue-router": "^4.3.2"
   }
 }
