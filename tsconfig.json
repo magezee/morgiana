@@ -13,7 +13,7 @@
     "noImplicitAny": false,
     
   },
-  "include": ["vite.config.ts", "page/**/*.d.ts", "page/**/*.vue", "page/**/*.ts", "main.ts", "env.d.ts", "routes.ts"],
+  "include": ["vite.config.ts", "page/**/*.d.ts", "page/**/*.vue", "page/**/*.ts", "main.ts", "env.d.ts", "routes.ts", "note/ouline.ts"],
   //"include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
   "exclude": ["node_modules"]
 }

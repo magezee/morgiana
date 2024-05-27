@@ -19,46 +19,65 @@ const formatNoteFileName = (fileName: string) => {
 }
 
 const getNoteOutline = () => {
-  // 层级结构可知为3层，因此不用递归了,方便拿不同层级的数据
+  // 层级结构可知为4层，因此不用递归了,方便拿不同层级的数据
   const notePath = path.join(__dirname, '../../note')
   const noteOutline = []
 
   const dir = fs.readdirSync(notePath, { withFileTypes: true })
 
-  dir.forEach((file) => {
-    if(file.isDirectory()) {
-      const firstFormat = formatNoteFileName(file.name)
+  dir.forEach((firstFile) => {
+    if(firstFile.isDirectory()) {
+      const firstFormat = formatNoteFileName(firstFile.name)
       const sort = []
       noteOutline.push({
-        desc: firstFormat[0],
-        id: firstFormat[0],
+        desc: firstFormat[1],
+        id: firstFormat[2],
         sort
       })
       
 
       // 第二层
-      const secondDirPath = path.join(notePath, file.name)
+      const secondDirPath = path.join(notePath, firstFile.name)
       const dir = fs.readdirSync(secondDirPath, { withFileTypes: true })
-      dir.forEach((file) => {
-        const secondFormat = formatNoteFileName(file.name)
-        const source = []
+      dir.forEach((secondFile) => {
+        const secondFormat = formatNoteFileName(secondFile.name)
+        const list = []
         sort.push({
           desc: secondFormat[1],
-          id: secondFormat[0],
-          source
+          id: secondFormat[2],
+          list
         })
 
         // 第三层
-        const thirdDirPath = path.join(secondDirPath, file.name)
+        const thirdDirPath = path.join(secondDirPath, secondFile.name)
         const dir = fs.readdirSync(thirdDirPath, { withFileTypes: true })
-        dir.forEach((file) => {
-          const thirdFormat = formatNoteFileName(file.name.slice(0,-4))   // 去掉.vue后缀名
-          source.push({
+        dir.forEach((thridFile) => {
+          const thirdFormat = formatNoteFileName(thridFile.name)   // 去掉.vue后缀名
+          const source = []
+          list.push({
             desc: thirdFormat[1],
-            id: thirdFormat[0],
-            pathName: `${firstFormat[1]}--${secondFormat[2]}--${thirdFormat[2]}`,
-            notePath: path.join(thirdDirPath, file.name)
+            id: thirdFormat[2],
+            number: thirdFormat[0],
+            source
           })
+
+
+          // 第四层
+          const fourthPath = path.join(thirdDirPath, thridFile.name)
+          const dir = fs.readdirSync(fourthPath, { withFileTypes: true })
+
+          dir.forEach((fourthFile) => {
+            const fourthFormat = formatNoteFileName(fourthFile.name.slice(0,-4))   // 去掉.vue后缀名
+            source.push({
+              desc: fourthFormat[1],
+              id: fourthFormat[2],
+              number: fourthFormat[0],
+              pathName: `${firstFormat[2]}--${secondFormat[2]}--${thirdFormat[2]}--${fourthFormat[2]}`,
+              notePath: `${firstFile.name}/${secondFile.name}/${thridFile.name}/${fourthFile.name}`,
+            })
+          })
+
+    
         })
       })
     }
@@ -68,6 +87,7 @@ const getNoteOutline = () => {
 
 // 将最新笔记目录的结构改动写入outline.ts文件
 const noteOutline = getNoteOutline()
+
 const sourceFilePath = path.join(__dirname, '../../note/ouline.ts')
 
 const project = new Project({
@@ -119,22 +139,41 @@ noteOutline.forEach((note) => {
           writer.write('id: ').quote(sort.id)
           writer.write(',')
           writer.newLine()
-          writer.write('source: [')
+          writer.write('list: [')
           writer.newLine()
-          sort.source.forEach((source) => {
+          sort.list.forEach((list) => {
             writer.inlineBlock(() => {
-              writer.write('desc: ').quote(source.desc)
+              writer.write('desc: ').quote(list.desc)
               writer.write(',')
               writer.newLine()
-              writer.write('id: ').quote(source.id)
+              writer.write('id: ').quote(list.id)
               writer.write(',')
               writer.newLine()
-              writer.write('pathName: ').quote(source.pathName)
+              writer.write('number: ').quote(list.number)
               writer.write(',')
               writer.newLine()
-              writer.write('notePath: ').quote(source.notePath)
-              writer.write(',')
+              writer.write('source: [')
               writer.newLine()
+              list.source.forEach((source) => {
+                writer.inlineBlock(() => {
+                  writer.write('desc: ').quote(source.desc)
+                  writer.write(',')
+                  writer.newLine()
+                  writer.write('id: ').quote(source.id)
+                  writer.write(',')
+                  writer.newLine()
+                  writer.write('number: ').quote(source.number)
+                  writer.write(',')
+                  writer.newLine()
+                  writer.write('pathName: ').quote(source.pathName)
+                  writer.write(',')
+                  writer.newLine()
+                  writer.write('notePath: ').quote(source.notePath)
+                })
+                writer.write(',')
+                writer.newLine()
+              })
+              writer.write(']')
             })
             writer.write(',')
             writer.newLine()
