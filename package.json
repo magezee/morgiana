@@ -6,7 +6,9 @@
   "scripts": {
     "start": "ts-node ./server/command/start.ts",
     "dev:page": "vite",
-    "update": "ts-node ./server/command/update.ts"
+    "server": "npm run build && ts-node ./server/app.ts",
+    "update": "ts-node ./server/command/update.ts",
+    "build": "vite build"
   },
   "keywords": [],
   "author": "",
@@ -16,8 +18,13 @@
     "@types/node": "^20.12.7",
     "@vitejs/plugin-vue": "^5.0.4",
     "@vue/compiler-sfc": "^3.4.25",
+    "@vueuse/core": "^10.10.0",
+    "axios": "^1.7.2",
+    "connect-history-api-fallback": "^2.0.0",
+    "express": "^4.19.2",
     "inquirer": "8",
     "less": "^4.2.0",
+    "prismjs": "^1.29.0",
     "ts-morph": "^22.0.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.5",

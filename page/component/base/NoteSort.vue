@@ -1,7 +1,7 @@
 <!-- 此文件用于创建新笔记文件时方便复制的空模板 -->
 <template>
   <div class="note--sort">
-    <div class="sort-desc">{{ noteSortInfo.desc }}</div>
+    <div class="sort-desc">{{ `${noteSortInfo.desc}笔记` }}</div>
     <div class="sort-wrap">
       <div 
         v-for="noteList in noteSortInfo.list"
@@ -11,7 +11,8 @@
       >
         <div class="list-desc">
           <span class="desc-text" @click="selectNoteList(noteList.number)">{{ noteList.desc }}</span>
-          <img :class="['desc-icon', { 'expand': expandNoteList[noteList.number] }]" :src="expandNoteList[noteList.number] ? UpArrowIcon : DownArrowIcon" >
+          <SvgIcon :class="['desc-icon', { 'expand': expandNoteList[noteList.number] }]" :id="expandNoteList[noteList.number] ? 'arrow-up' : 'arrow-down'"
+          />
         </div>
         
         <div 
@@ -19,7 +20,7 @@
           :class="['note-source', { 'active': props.notePathName === noteSource.pathName }]"
         >
           <span class="desc-text" @click="jumpNote(noteSource.pathName)">{{ noteSource.desc }}</span>
-          <img class="desc-icon" :src="LeftArrowIcon" >
+          <SvgIcon class="desc-icon" id="arrow-left"/>
         </div>
       </div>
 
@@ -28,13 +29,11 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, watchEffect, onMounted } from 'vue'
+import { ref, computed, watch, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 
-import { outline, type Outline } from '../../../note/ouline'
-import LeftArrowIcon from '../../assets/icon/arrow-left.svg'
-import UpArrowIcon from '../../assets/icon/arrow-up.svg'
-import DownArrowIcon from '../../assets/icon/arrow-down.svg'
+import { type Outline } from '../../../note/ouline'
+import SvgIcon from '../ui/SvgIcon.vue'
 
 type Props = {
   noteSortInfo: Outline[0]['sort'][0],
@@ -48,7 +47,12 @@ const router = useRouter()
 
 const expandNoteList = ref<{[key: string]: boolean}>({ [props.initExpandListNumber]: true })
 
-console.log()
+watch(noteSortInfo, () => {
+  // 这里是为了从大纲切换过来时,避免上一个笔记列表展开的影响,因此关闭全部展开项,默认展开第一个
+  expandNoteList.value = {}
+  expandNoteList.value['1'] = true
+})
+
 // 计算长度以此方便做风琴动画效果
 const getNoteListWrapHeight = (noteCount) => {
   return `${ 28 * (noteCount + 1)}px`

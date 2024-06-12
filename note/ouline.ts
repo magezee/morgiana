@@ -26,7 +26,7 @@ export const outline = [
     id: "front",
     sort: [
     {
-      desc: "JS代码",
+      desc: "JS",
       id: "js",
       list: [
       {
@@ -39,14 +39,14 @@ export const outline = [
           id: "context",
           number: "1-1",
           pathName: "front--js--env--context",
-          notePath: "[1][前端][front]/[1][JS代码][js]/[1][环境][env]/[1-1][上下文][context].vue"
+          notePath: "[1][前端][front]/[1][JS][js]/[1][环境][env]/[1-1][上下文][context].vue"
         },
         {
           desc: "作用域",
           id: "scope",
           number: "1-2",
           pathName: "front--js--env--scope",
-          notePath: "[1][前端][front]/[1][JS代码][js]/[1][环境][env]/[1-2][作用域][scope].vue"
+          notePath: "[1][前端][front]/[1][JS][js]/[1][环境][env]/[1-2][作用域][scope].vue"
         },
         ]
       },
@@ -60,21 +60,21 @@ export const outline = [
           id: "type",
           number: "2-1",
           pathName: "front--js--data--type",
-          notePath: "[1][前端][front]/[1][JS代码][js]/[2][数据][data]/[2-1][基本类型][type].vue"
+          notePath: "[1][前端][front]/[1][JS][js]/[2][数据][data]/[2-1][基本类型][type].vue"
         },
         {
           desc: "原型链",
           id: "prototype",
           number: "2-2",
           pathName: "front--js--data--prototype",
-          notePath: "[1][前端][front]/[1][JS代码][js]/[2][数据][data]/[2-2][原型链][prototype].vue"
+          notePath: "[1][前端][front]/[1][JS][js]/[2][数据][data]/[2-2][原型链][prototype].vue"
         },
         ]
       },
       ]
     },
     {
-      desc: "CSS样式",
+      desc: "CSS",
       id: "css",
       list: [
       {
@@ -87,7 +87,7 @@ export const outline = [
           id: "selector",
           number: "1-1",
           pathName: "front--css--base--selector",
-          notePath: "[1][前端][front]/[2][CSS样式][css]/[1][基本][base]/[1-1][选择器][selector].vue"
+          notePath: "[1][前端][front]/[2][CSS][css]/[1][基本][base]/[1-1][选择器][selector].vue"
         },
         ]
       },
@@ -101,7 +101,7 @@ export const outline = [
           id: "less",
           number: "2-1",
           pathName: "front--css--preprocessor--less",
-          notePath: "[1][前端][front]/[2][CSS样式][css]/[2][预处理器][preprocessor]/[2-1][Less][less].vue"
+          notePath: "[1][前端][front]/[2][CSS][css]/[2][预处理器][preprocessor]/[2-1][Less][less].vue"
         },
         ]
       },
@@ -110,14 +110,60 @@ export const outline = [
     ]
   },
   {
-    desc: "游戏",
-    id: "game",
+    desc: "服务器",
+    id: "server",
     sort: [
+    {
+      desc: "Node",
+      id: "node",
+      list: [
+      {
+        desc: "node-js",
+        id: "node-js",
+        number: "1",
+        source: [
+        {
+          desc: "搭建服务",
+          id: "build",
+          number: "1-1",
+          pathName: "server--node--node-js--build",
+          notePath: "[2][服务器][server]/[1][Node][node]/[1][node-js][node-js]/[1-1][搭建服务][build].vue"
+        },
+        ]
+      },
+      {
+        desc: "express",
+        id: "express",
+        number: "2",
+        source: [
+        {
+          desc: "搭建服务",
+          id: "build",
+          number: "1-1",
+          pathName: "server--node--express--build",
+          notePath: "[2][服务器][server]/[1][Node][node]/[2][express][express]/[1-1][搭建服务][build].vue"
+        },
+        ]
+      },
+      ]
+    },
+    {
+      desc: "数据库",
+      id: "db",
+      list: [
+      ]
+    },
     ]
   },
   {
     desc: "绘画",
     id: "draw",
+    sort: [
+    ]
+  },
+  {
+    desc: "游戏",
+    id: "game",
     sort: [
     ]
   }

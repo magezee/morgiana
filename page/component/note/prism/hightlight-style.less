@@ -1,0 +1,112 @@
+.codeStyle() {
+  code[class*="language-"] {
+    position: absolute;
+    padding: 10px;
+    font-family: Menlo, Monaco, Consolas, "Andale Mono", "Ubuntu Mono", "Courier New", monospace;
+    font-size: 13px;
+    text-align: left;
+    color: #d4d4d4;
+
+
+    /*-------------------- 通用 --------------------*/
+    .comment {
+      color: #699955;
+    }
+
+    .punctuation {
+      color: #d4d4d4;
+    }
+
+    .operator {
+      color: #d4d4d4;
+    }
+
+    .builtin {
+      color:  #4EC9B0;
+    } 
+
+    .keyword {
+      color: #569CD6;
+    }
+
+    .function {
+      color: #dcdcaa;
+    }
+
+    .number {
+      color: #B5CEA8;
+    }
+
+    .string {
+      color: #CE9178;
+    }
+
+    .boolean {
+      color: #569CD6;
+    }
+
+
+
+    /*-------------------- html --------------------*/
+    .tag {
+      color: #569cd6;
+
+      .punctuation {
+        color: #569cd6;
+      }
+    }
+
+    .attr-name {
+      color: #9cdcfe;
+    }
+
+    .attr-value {
+      color: #ce9178;
+
+      .punctuation {
+        color: #ce9178;
+      }
+
+      .punctuation.attr-equals {
+        color: #d4d4d4;
+      }
+
+    }
+
+    .plain-text {
+      color: #d4d4d4;
+    }
+    
+
+    /*-------------------- css --------------------*/
+    .selector {
+      color: #d7ba7d;
+    }
+
+    .property {
+      color: #9cdcfe;
+    }
+  
+  }
+  code[class*="language-ts"] {
+    .class-name {
+      color: #4EC9B0;
+    }
+  }
+
+  // 语言的默认颜色
+  code[class*="language-js"],
+  code[class*="language-jsx"],
+  code[class*="language-ts"],
+  code[class*="language-tsx"]
+  {
+    color: #9cdcfe;
+  }
+
+  code[class*="css"],
+  code[class*="less"],
+  code[class*="scss"] 
+  {
+    color: #ce9178;
+  }
+}
