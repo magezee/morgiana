@@ -43,6 +43,7 @@ const useMarkdownText = async (innerHtml='') => {
 
   resultHtml = resultHtml.replace(/&amp;.*?;/g, (match) => {
     return {
+      '&amp;amp;': '&amp;',
       '&amp;lt;': '&lt;',
       '&amp;gt;': '&gt;'
     }[match] || ''

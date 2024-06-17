@@ -43,7 +43,6 @@ const leave = (element: Element) => {
   z-index: 20;
   top: 10vh;
   right: 10px;
-  width: 200px;
 
   .toast {
     margin-top: 10px;

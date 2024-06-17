@@ -1,6 +1,9 @@
 <template>
   <div class="home-recent-update">
-    <div class="update-title">近期更新</div>
+    <div class="update-title">
+      <SvgIcon class="update-icon" id="update" :useExternalColor="true"></SvgIcon>
+      近期更新
+    </div>
     <div class="update-list">
       <div 
         class="update-item" 
@@ -16,6 +19,8 @@
 
 <script setup lang="ts">
 import { useRouter } from 'vue-router'
+
+import SvgIcon from '../ui/SvgIcon.vue';
 
 const router = useRouter()
 
@@ -53,11 +58,21 @@ const jumpRoute = (route) => {
 
 .home-recent-update {
   .update-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-bottom: 15px;
     font-size: 20px;
     font-weight: 600;
     text-align: center;
     color: @Color[pink];
+
+    .update-icon {
+      width: 20px;
+      height: 20px;
+      margin-right: 6px;
+      fill: @Color[pink];
+    }
   }
 
   .update-list {

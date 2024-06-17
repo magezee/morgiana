@@ -7,6 +7,7 @@ import Image from './Image.vue'
 import List from './List.vue'
 import Refer from './Refer.vue'
 import Quote from './Quote.vue'
+import Tip from './Tip.vue'
 
 export {
   Code,
@@ -18,4 +19,5 @@ export {
   List,
   Refer,
   Quote,
+  Tip,
 }

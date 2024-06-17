@@ -9,13 +9,15 @@
     <Text>为了图方便目前该站所有内容均为静态前端页面，想自己从零开始搭一个网站出来</Text>
     <Text>还有很多设计方面的内容没有思路，网站后续的功能会陆续补充齐全</Text>
     <Text>或许会直接尝试使用社区成熟的博客框架去搭建另外一个自己的小站，未来的事情谁知道呢~</Text>
-    
   </div>
 </template>
 
 <script setup lang="ts">
 import { Text, Line } from '../note'
 
+const test = () => {
+  alert(1)
+}
 
 </script>
 
@@ -23,9 +25,13 @@ import { Text, Line } from '../note'
 @import url('../../style/variables.less');
 
 .home--index {
+  position: relative;
   width: 100%;
+  height: calc(100% - 4px);
   padding: 0 40px;
   overflow-y: auto;
+  animation-name: mountedHomeIndex;
+  animation-duration: 2s;
   
   * {
     user-select: none;
@@ -36,7 +42,24 @@ import { Text, Line } from '../note'
     font-size: 24px;
     font-weight: 600;
     text-align: center;
-    
+  }
+
+  .record {
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    font-size: 13px;
+    text-align: center;
+    color: @Color[mono-v3];
+  }
+}
+
+@keyframes mountedHomeIndex {
+  0% {
+    transform: translateY(4px);
+  }
+  100% {
+    transform: translateX(0);
   }
 }
   

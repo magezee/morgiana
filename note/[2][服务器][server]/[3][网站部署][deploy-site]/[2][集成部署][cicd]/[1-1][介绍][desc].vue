@@ -1,10 +1,10 @@
 <template>
-
+  <Text>>111</Text>
 </template>
 
 <script setup lang="ts">
 import { onMounted } from 'vue';
-// import { Code, Line, Title, Text, Table, Image, List, Refer, Quote, Tip } from '../../../../page/component/note'
+import { Code, Line, Title, Text, Table, Image, List, Refer, Quote } from '../../../../page/component/note'
 
 const emits = defineEmits([ 'noteContentMounted' ])
 

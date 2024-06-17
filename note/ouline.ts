@@ -153,17 +153,79 @@ export const outline = [
       list: [
       ]
     },
-    ]
-  },
-  {
-    desc: "绘画",
-    id: "draw",
-    sort: [
+    {
+      desc: "网站部署",
+      id: "deploy-site",
+      list: [
+      {
+        desc: "Docker",
+        id: "docker",
+        number: "1",
+        source: [
+        {
+          desc: "介绍",
+          id: "desc",
+          number: "1-1",
+          pathName: "server--deploy-site--docker--desc",
+          notePath: "[2][服务器][server]/[3][网站部署][deploy-site]/[1][Docker][docker]/[1-1][介绍][desc].vue"
+        },
+        {
+          desc: "描述文件",
+          id: "docker-file",
+          number: "1-2",
+          pathName: "server--deploy-site--docker--docker-file",
+          notePath: "[2][服务器][server]/[3][网站部署][deploy-site]/[1][Docker][docker]/[1-2][描述文件][docker-file].vue"
+        },
+        {
+          desc: "容器编排",
+          id: "docker-compose",
+          number: "1-3",
+          pathName: "server--deploy-site--docker--docker-compose",
+          notePath: "[2][服务器][server]/[3][网站部署][deploy-site]/[1][Docker][docker]/[1-3][容器编排][docker-compose].vue"
+        },
+        {
+          desc: "Yaml",
+          id: "yaml",
+          number: "1-4",
+          pathName: "server--deploy-site--docker--yaml",
+          notePath: "[2][服务器][server]/[3][网站部署][deploy-site]/[1][Docker][docker]/[1-4][Yaml][yaml].vue"
+        },
+        {
+          desc: "问题汇总",
+          id: "solution",
+          number: "1-5",
+          pathName: "server--deploy-site--docker--solution",
+          notePath: "[2][服务器][server]/[3][网站部署][deploy-site]/[1][Docker][docker]/[1-5][问题汇总][solution].vue"
+        },
+        ]
+      },
+      {
+        desc: "集成部署",
+        id: "cicd",
+        number: "2",
+        source: [
+        {
+          desc: "介绍",
+          id: "desc",
+          number: "1-1",
+          pathName: "server--deploy-site--cicd--desc",
+          notePath: "[2][服务器][server]/[3][网站部署][deploy-site]/[2][集成部署][cicd]/[1-1][介绍][desc].vue"
+        },
+        ]
+      },
+      ]
+    },
     ]
   },
   {
     desc: "游戏",
     id: "game",
+    sort: [
+    ]
+  },
+  {
+    desc: "绘画",
+    id: "draw",
     sort: [
     ]
   }

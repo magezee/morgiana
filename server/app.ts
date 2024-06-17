@@ -18,7 +18,7 @@ app.use(history({
 }))
 app.use(express.static(path.join(__dirname, '../dist')))
 
-app.listen(3001, () => {
+app.listen(80, () => {
   console.log('服务启动成功!!')
-  console.log('http://localhost:3001')
+  console.log('http://localhost')
 })

@@ -17,11 +17,11 @@
             <HomeContact></HomeContact>
           </div>
         </ShowcaseCard>
-        <ShowcaseCard class="site-notice" boxShadowColor="#c5e0b9">
-          施工中。。。
+        <ShowcaseCard class="my-project" boxShadowColor="#c5e0b9">
+          <HomeProject></HomeProject>
         </ShowcaseCard>
         <ShowcaseCard class="charge-enter" boxShadowColor="#cec5c7">
-          施工中。。。
+          <HomeCharge></HomeCharge>
         </ShowcaseCard>
       </div>
 
@@ -29,6 +29,7 @@
         <div class="scroll-container">
           <RouterView></RouterView>
         </div>
+        <div class="record">Copyright ©2024 桂ICP备2021005699号-2</div>
       </ShowcaseCard>
       
       <div class="home-container--right">
@@ -41,6 +42,7 @@
         </ShowcaseCard>
       </div>
 
+      
 
 
     </div>
@@ -57,6 +59,8 @@ import HomeAvatar from '../component/base/HomeAvatar.vue'
 import HomeContact from '../component/base/HomeContact.vue'
 import HomeDashBoard from '../component/base/HomeDashBoard.vue'
 import HomeRecentUpdate from '../component/base/HomeRecentUpdate.vue'
+import HomeProject from '../component/base/HomeProject.vue'
+import HomeCharge from '../component/base/HomeCharge.vue'
 
 import ShowcaseCard from '../component/ui/ShowcaseCard.vue'
 
@@ -92,7 +96,7 @@ onMounted(() => {
     display: flex;
     position: relative;
     height: 100%;
-    padding: calc(25vh + 20px) 0 20px 0;
+    padding: calc(25vh + 20px) 0 24px 0;
     margin: 0 150px;
     
 
@@ -145,7 +149,7 @@ onMounted(() => {
         }
       }
 
-      .site-notice {
+      .my-project {
         flex: 1;
         transform: translateX(-6px);
         .mountCardAnimation(mountedLeftCard, .2s);
@@ -153,7 +157,9 @@ onMounted(() => {
 
       .charge-enter {
         height: 80px;
+        padding: 0;
         transform: translateX(-6px);
+        overflow: hidden;
         .mountCardAnimation(mountedLeftCard, .4s);
       }
     }
@@ -162,12 +168,21 @@ onMounted(() => {
       flex: 1;
       min-width: 600px;
       margin: 0 20px;
-      overflow: hidden;
-      .mountCardAnimation(mountedMiddleCard, 0);
+      //.mountCardAnimation(mountedMiddleCard, 0);
 
       .scroll-container {
         height: 100%;
         overflow-y: auto;
+      }
+
+      .record {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        font-size: 13px;
+        text-align: center;
+        color: @Color[mono-v3];
+        transform: translateX(-50%);
       }
     }
 

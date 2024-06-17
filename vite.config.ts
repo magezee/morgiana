@@ -6,7 +6,7 @@ import { resolve } from 'path'
 export default defineConfig({
   plugins: [vue()],
   server: {
-    port: 80,
+    port: 3000,
     host: '0.0.0.0'
   },
   publicDir: resolve(__dirname, './page/public'),

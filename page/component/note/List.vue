@@ -29,7 +29,6 @@ onMounted(async () => {
   while(instance?.type.__name === instance?.parent?.type.__name) {
     rank.value += 1
     instance = instance?.parent!
-    console.log(rank.value)
   }
 
   // 加延时是为了确保dom的rank正确

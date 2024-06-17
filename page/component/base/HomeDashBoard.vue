@@ -16,39 +16,32 @@ const toast = useToast()
 type MenuData = Array<{
   id: string,
   name: string,
-  routePath: string
 }>
 
 const menuData: MenuData = [
   {
     id: '首页',
     name: '🏠  首页',
-    routePath: '/'
   },
   {
     id: '笔记',
     name: '📔  笔记',
-    routePath: 'home-note'
   },
   {
     id: '绘画',
     name: '🎨  绘画',
-    routePath: 'home-note'
   },
   {
     id: '生活',
     name: '🍵  生活',
-    routePath: 'home-life'
   },
   {
     id: '友链',
     name: '🤣  友链',
-    routePath: 'home-friends'
   },
   {
-    id: '备案',
-    name: '⚠️  备案',
-    routePath: 'home-about'
+    id: '通知',
+    name: '🚨  通知',
   },
 ]
 
@@ -64,8 +57,12 @@ const dashBoardAction = (menuId) => {
       toast('🤗 施工中...')
       break
     case '生活':
-    toast('敬请期待')
+      toast('敬请期待')
       break
+    case '通知':
+      toast('施工中...')
+      break
+      
   }
 }
 
