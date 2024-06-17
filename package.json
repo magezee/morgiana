@@ -6,7 +6,7 @@
   "scripts": {
     "start": "ts-node ./server/command/start.ts",
     "dev:page": "vite",
-    "server": "npm run build && ts-node ./server/app.ts",
+    "server": "ts-node ./server/app.ts",
     "update": "ts-node ./server/command/update.ts",
     "build": "vite build"
   },
