@@ -58,6 +58,7 @@
       version: '1'
       services:
         # 通过dockerfile构建镜像并启动前端服务容器
+        # 该名字决定了构建后的镜像名字，默认格式为项目文件夹名字-该字段，比如如果项目名为demo，那么构建后的这部分镜像为demo-web
         web:
           # .表示使用该目录下的dockerfile文件构建
           build: .
