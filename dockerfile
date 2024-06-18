@@ -4,8 +4,8 @@ WORKDIR /app
 COPY . *.json ./
 RUN npm install
 COPY . .
-CMD [ "npm", "run", "update" ]
-CMD [ "npm", "run", "build" ]
+RUN npm run update
+RUN npm run build
 
 # 获取构建文件并启动服务
 FROM node:latest
