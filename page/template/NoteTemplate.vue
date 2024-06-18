@@ -1,5 +1,5 @@
 <template>
-  <div class="note--tempalte">
+  <div class="note--tempalte" @copy="copyToast">
     <div class="note-header">
       <div class="site-name">
         <span class="site-name-text" @click="goHome">Morgiana</span> 
@@ -49,6 +49,7 @@ import { shallowRef, watchEffect, ref, defineAsyncComponent, Transition } from '
 import { useRoute, useRouter } from 'vue-router'
 import { outline } from '../../note/ouline'
 import { delay } from '../tools/util'
+import { useToast } from '../hook'
 
 import NoteSort from '../component/base/NoteSort.vue'
 import NoteOutline from '../component/base/NoteOutline.vue'
@@ -58,6 +59,8 @@ import SvgIcon from '../component/ui/SvgIcon.vue'
 
 const route = useRoute()
 const router = useRouter()
+const toast = useToast()
+
 const noteSortInfo = ref()
 const notePathName = ref()
 const noteInfo = ref()
@@ -119,6 +122,10 @@ const hideOutlineCard = () => {
 
 const clearOutlineCardTimer = () => {
   clearTimeout(hideOutlineCardTimer.value)
+}
+
+const copyToast = () => {
+  toast('复制成功~')
 }
 
 </script>

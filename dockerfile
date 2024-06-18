@@ -8,7 +8,7 @@ RUN npm run update
 RUN npm run build
 
 # 获取构建文件并启动服务
-FROM node:latest
+FROM node:latest as server
 WORKDIR /app
 
 COPY --from=build /app/dist ./dist

@@ -1,0 +1,9 @@
+version: '1'
+
+services:
+  web:
+    build: .
+    container_name: web-container
+    restart: always
+    ports:
+      - 80:80

@@ -141,6 +141,9 @@ const expandCode = () => {
         padding: 4px 10px;
         flex: 1;
         border-right: .5px solid @Color[mono-v6];
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
         transition: .2s;
         
         cursor: pointer;
