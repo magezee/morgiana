@@ -1,6 +1,7 @@
 import express from 'express'
 import cors from 'cors'
 import path from 'path'
+import bodyParser from 'body-parser'
 
 import apiRoute from './api'
 
@@ -16,7 +17,10 @@ app.all('*', function(req, res, next){
 })
 
 app.use(express.static(path.join(__dirname, '../dist')))
+
+
 app.use(cors())
+app.use(bodyParser.json())
 app.use('/api', apiRoute)
 
 // 单页面应用需要兜住路由，确保访问无效路由时能重新指定向回html来达到跳转到页面路由的目的、
