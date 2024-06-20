@@ -11,7 +11,9 @@ router.post('/webhook', async(req, res) => {
 
   // 推送到main分支才触发
   if (payload?.ref === 'refs/heads/main') {
-    exec('cd /project/morgiana && git pull && ./update-docker.sh', (err, stdout, stderr) => {
+    process.chdir('/project/morgiana')  // 修改进程工作目录
+
+    exec('git pull && ./update-docker.sh', (err, stdout, stderr) => {
       if (err) {
         console.error(`Error executing command: ${stderr}`)
         return res.status(500).send(`Error: ${stderr}`)
