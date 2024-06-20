@@ -35,6 +35,9 @@ dependencies:
   express:
     specifier: ^4.19.2
     version: 4.19.2
+  express-timeout-handler:
+    specifier: ^2.2.2
+    version: 2.2.2
   inquirer:
     specifier: '8'
     version: 8.2.6
@@ -1061,6 +1064,11 @@ packages:
   /etag@1.8.1:
     resolution: {integrity: sha512-aIL5Fx7mawVa300al2BnEE4iNvo1qETxLrPI/o05L7z6go7fCw1J6EQmbK4FmJ2AS7kgVF/KEZWufBfdClMcPg==}
     engines: {node: '>= 0.6'}
+    dev: false
+
+  /express-timeout-handler@2.2.2:
+    resolution: {integrity: sha512-XuBCno5LfBtcEbeaOAlhouHVfow0Xgy6s4Y4bj/S/zidkE7z99eBGhWk4bkX9PW0LPeIgO6G0ouEdCs2AGoBOQ==}
+    engines: {node: '>=6.0.0'}
     dev: false
 
   /express@4.19.2:

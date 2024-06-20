@@ -1,10 +1,18 @@
 import express from 'express'
+import timeout from 'express-timeout-handler'
 import cors from 'cors'
 import bodyParser from 'body-parser'
 
 import apiRoute from './api'
 
 const app = express()
+
+const timeoutOtions = {
+  timeout: 5 * 60 * 1000,
+  onTimeout: (req, res) => {
+    res.status(503).send('超时噜~');
+},
+}
 
 // 暂时全开 后期改掉
 app.all('*', function(req, res, next){
@@ -15,8 +23,7 @@ app.all('*', function(req, res, next){
   next()
 })
 
-
-
+app.use(timeout.handler(timeoutOtions))
 app.use(cors())
 app.use(bodyParser.json())
 app.use('/api', apiRoute)
