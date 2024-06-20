@@ -6,9 +6,10 @@
   "scripts": {
     "start": "ts-node ./server/command/start.ts",
     "dev:page": "vite",
-    "server": "ts-node ./server/app.ts",
     "update": "ts-node ./server/command/update.ts",
-    "build": "vite build"
+    "build": "vite build",
+    "server": "ts-node ./server/app.ts",
+    "webhook-server": "ts-node ./server/webhook-app.ts"
   },
   "keywords": [],
   "author": "",
