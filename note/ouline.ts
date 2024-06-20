@@ -207,9 +207,16 @@ export const outline = [
         {
           desc: "介绍",
           id: "desc",
-          number: "1-1",
+          number: "2-1",
           pathName: "server--deploy-site--cicd--desc",
-          notePath: "[2][服务器][server]/[3][网站部署][deploy-site]/[2][集成部署][cicd]/[1-1][介绍][desc].vue"
+          notePath: "[2][服务器][server]/[3][网站部署][deploy-site]/[2][集成部署][cicd]/[2-1][介绍][desc].vue"
+        },
+        {
+          desc: "Webhook",
+          id: "webhook",
+          number: "2-2",
+          pathName: "server--deploy-site--cicd--webhook",
+          notePath: "[2][服务器][server]/[3][网站部署][deploy-site]/[2][集成部署][cicd]/[2-2][Webhook][webhook].vue"
         },
         ]
       },

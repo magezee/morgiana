@@ -15,6 +15,16 @@
 
 
 
+**请求库**
+
+```markdown
+- axios
+```
+
+
+
+
+
 -----
 
 ### 服务相关
@@ -24,6 +34,9 @@
 ```markdown
 - ts-node
 - @types/node
+- express
+- @types/express
+- cors
 ```
 
 

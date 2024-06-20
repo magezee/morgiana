@@ -21,7 +21,32 @@
       docker load -i ./node.tar
     ---
   `}}</Code>
-  
+  <Line></Line>
+
+  <Title>##无法更新内容</Title>
+  <Text>我项目改动后，直接上传到`git hub`，然后通过`git pull`的方式更新内容，并重新执行`docker compose`，发现项目内容并没有改动，这是 docker 缓存了镜像文件导致的</Text>
+  <Text>因此需要手动刪除旧容器及其旧镜像，再重新通过`docker compose`构建镜像并启动容器来达到更新的目的，为了方便实施，可以直接写一个`shell`脚本</Text>
+  <Code>{{`
+    ---shell(docker-update.sh)
+      #!/bin/bash
+
+      IMAGE_NAME="你需要刪除的镜像名"
+      HOST_PORT=主机端口
+      CONTAINER_PORT=容器端口
+
+      echo "停止并刪除旧容器..."
+      docker stop $(docker ps -a -q --filter ancestor=$IMAGE_NAME) && docker rm $(docker ps -a -q --filter ancestor=$IMAGE_NAME)
+
+      echo "刪除旧镜像..."
+      docker rmi -f $IMAGE_NAME
+
+      echo "执行docker compose"
+      docker compose up -d
+
+      echo "Done!"
+    ---
+  `}}</Code>
+  <Text>如果发现没有权限执行，则给个权限`chmod +x update-docker.sh`，以后启动docker就直接运行这个文件即可~</Text>
 
 </template>
 
