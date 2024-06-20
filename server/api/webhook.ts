@@ -10,7 +10,7 @@ router.post('/webhook', async(req, res) => {
   const payload = req.body
 
   // 推送到main分支才触发
-  if (payload?.ref === 'refs/head/main') {
+  if (payload?.ref === 'refs/heads/main') {
     exec('cd /project/morgiana && git pull && ./update-docker.sh', (err, stdout, stderr) => {
       if (err) {
         console.error(`Error executing command: ${stderr}`)
