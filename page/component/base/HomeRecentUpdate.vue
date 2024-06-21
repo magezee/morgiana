@@ -27,24 +27,14 @@ const router = useRouter()
 const updateList = [
   {
     id: '1',
-    name: '【笔记】Css布局',
-    route: '/note/front--js--env--context'
+    name: '【笔记】Docker用法',
+    route: '/note/server--deploy-site--docker--desc'
   },
   {
-    id: '1',
-    name: '【笔记】Css布局',
-    route: ''
+    id: '2',
+    name: '【笔记】集成部署',
+    route: '/note/server--deploy-site--cicd--desc'
   },
-  {
-    id: '1',
-    name: '【笔记】Css布局',
-    route: ''
-  },
-  {
-    id: '1',
-    name: '【笔记】Css布局',
-    route: ''
-  }
 ]
 
 const jumpRoute = (route) => {

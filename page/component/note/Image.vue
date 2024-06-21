@@ -35,11 +35,16 @@ const viewDetailImage = async() => {
   if (!props.width) return
   const imgRect = (imgRef.value as HTMLElement).getBoundingClientRect()
   const intervalWidth = 300  // 图片放大不占满全屏,默认留300空隙,即发大后应该图片视口居中,左右间隔各150px
+  const intervalHeight = 150
   
   const viewPortWidth = document.body.clientWidth
   const viewPortHeight = document.body.clientHeight
 
-  const scale = (viewPortWidth - intervalWidth) / props.width!    // 用视口宽度计算放大比例
+  // 用最小倍率进行缩放
+  const widthScale = (viewPortWidth - intervalWidth) / props.width!    // 用视口宽度计算放大比例
+  const heightScale = (viewPortHeight - intervalHeight) / imgRect.height
+  const scale = widthScale > heightScale ? heightScale : widthScale
+
   if (scale < 1) {
     return
   }
@@ -48,15 +53,12 @@ const viewDetailImage = async() => {
   const detailImgWidth = imgRect.width * scale
   const detailImgHeight = imgRect.height * scale
 
-  const intervalHeight = viewPortHeight - detailImgHeight
-
   const detailImgLeft = imgRect.left - ((detailImgWidth - imgRect.width) / 2)  
   const detailImgTop = imgRect.top - ((detailImgHeight - imgRect.height) / 2)  
 
-  const translateX = -(detailImgLeft - (intervalWidth / 2))
-  const translateY = -(detailImgTop - (intervalHeight / 2))
+  const translateX = -(detailImgLeft - ((viewPortWidth - detailImgWidth) / 2))
+  const translateY = -(detailImgTop - ((viewPortHeight - detailImgHeight) / 2))
   
-
   detailImgTranslateX.value = `${translateX / scale}px`   // 因为scale了,因此唯一需要除以对应scale倍数
   detailImgTranslateY.value = `${translateY / scale}px`
   detailImgScale.value = scale
@@ -90,7 +92,7 @@ const moveDetailImgByScroll = () => {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 9;
+  z-index: 20;
   width: 100%;
   height: 100%;
   background: #000;
@@ -110,7 +112,9 @@ const moveDetailImgByScroll = () => {
   cursor: zoom-in;
 
   &.detail {
-    z-index: 10;
+    z-index: 30;
+    border-radius: 3px;
+    border-color: @Color[blue-light];
     transform: v-bind(imgTransform);
   }
 }
