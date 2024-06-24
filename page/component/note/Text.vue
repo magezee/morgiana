@@ -13,9 +13,11 @@ import { useMarkdownText } from '../../hook/note'
 
 const noteTextContent = ref()
 const slotContainer = ref<HTMLElement>()
+const a = ref()
 
 onMounted(async() => {
   noteTextContent.value = await useMarkdownText(slotContainer.value?.innerHTML)
+  
 })
 
 </script>

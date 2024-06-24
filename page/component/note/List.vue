@@ -15,7 +15,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, getCurrentInstance } from 'vue'
+import { ref, onMounted, getCurrentInstance, nextTick } from 'vue'
 import { useMarkdownText } from '../../hook/note'
 
 const noteTextContent = ref()
@@ -31,10 +31,10 @@ onMounted(async () => {
     instance = instance?.parent!
   }
 
-  // 加延时是为了确保dom的rank正确
-  setTimeout(async () => {
+  // 不使用nextTick会导致层级判断错误
+  nextTick(async() => {
     noteTextContent.value = await useMarkdownText(slotContainer.value?.innerHTML)
-  }, 30)
+  })
   
 })
 
