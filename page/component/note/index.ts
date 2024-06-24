@@ -8,6 +8,7 @@ import List from './List.vue'
 import Refer from './Refer.vue'
 import Quote from './Quote.vue'
 import Tip from './Tip.vue'
+import Api from './Api.vue'
 
 export {
   Code,
@@ -20,4 +21,5 @@ export {
   Refer,
   Quote,
   Tip,
+  Api
 }

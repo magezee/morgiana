@@ -14,7 +14,7 @@
   <Text>此方案需要先给本地电脑安装 docker 服务，我这里直接下载了官方的 `docker desktop`，然后下载想要的镜像（我这里是 node 镜像），最后传到服务器上读取镜像</Text>
   <Code>{{`
     ---bash(导出和读取镜像)
-      # 该命令会在执行文件的目录下生成 node.tar 压缩包
+      # 该命令会在执行指令的目录下生成 node.tar 压缩包
       docker save -o node.tar node:latest
 
       # 上传服务器后再读取

@@ -42,11 +42,18 @@ export const outline = [
           notePath: "[1][前端][front]/[1][JS][js]/[1][环境][env]/[1-1][上下文][context].vue"
         },
         {
-          desc: "作用域",
-          id: "scope",
+          desc: "事件循环",
+          id: "loop",
           number: "1-2",
-          pathName: "front--js--env--scope",
-          notePath: "[1][前端][front]/[1][JS][js]/[1][环境][env]/[1-2][作用域][scope].vue"
+          pathName: "front--js--env--loop",
+          notePath: "[1][前端][front]/[1][JS][js]/[1][环境][env]/[1-2][事件循环][loop].vue"
+        },
+        {
+          desc: "模块化",
+          id: "module",
+          number: "1-3",
+          pathName: "front--js--env--module",
+          notePath: "[1][前端][front]/[1][JS][js]/[1][环境][env]/[1-3][模块化][module].vue"
         },
         ]
       },
@@ -217,6 +224,13 @@ export const outline = [
           number: "2-2",
           pathName: "server--deploy-site--cicd--webhook",
           notePath: "[2][服务器][server]/[3][网站部署][deploy-site]/[2][集成部署][cicd]/[2-2][Webhook][webhook].vue"
+        },
+        {
+          desc: "Github Action",
+          id: "github-action",
+          number: "2-3",
+          pathName: "server--deploy-site--cicd--github-action",
+          notePath: "[2][服务器][server]/[3][网站部署][deploy-site]/[2][集成部署][cicd]/[2-3][Github Action][github-action].vue"
         },
         ]
       },

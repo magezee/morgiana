@@ -1,11 +1,11 @@
 <template>
-  <div class="1">作用域</div>
-  <Title>#33</Title>
+  <Tip>最后更新 - 2024.06.24</Tip>
+  <Title>#模块化</Title>
 </template>
 
 <script setup lang="ts">
 import { onMounted } from 'vue';
-import { Code, Line, Title, Text } from '../../../../page/component/note/'
+import { Code, Line, Title, Text, Table, Image, List, Refer, Quote, Tip, Api } from '../../../../page/component/note/'
 
 const emits = defineEmits([ 'noteContentMounted' ])
 

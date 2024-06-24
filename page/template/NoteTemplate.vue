@@ -259,6 +259,7 @@ const copyToast = () => {
     .note-content-container {
       width: 100%;
       min-width: 800px;
+      min-height: calc(100vh - 50px); // 50px是顶部导航高度
       padding: 20px 280px 200px 60px;
       animation-name: updateNoteContent;
       animation-duration: 1.2s;

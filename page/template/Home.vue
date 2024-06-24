@@ -165,6 +165,7 @@ onMounted(() => {
     }
 
     .home-container--main {
+      position: relative;
       flex: 1;
       min-width: 600px;
       margin: 0 20px;
@@ -177,7 +178,7 @@ onMounted(() => {
 
       .record {
         position: absolute;
-        bottom: 0;
+        bottom: -28px;
         left: 50%;
         font-size: 13px;
         text-align: center;

@@ -1,5 +1,5 @@
 <template>
-  <p class="note--text" ref="test">
+  <p class="note--text">
     <span class="slot-container" ref="slotContainer" v-if="!noteTextContent">
       <slot></slot>
     </span>
@@ -10,6 +10,7 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
 import { useMarkdownText } from '../../hook/note'
+
 const noteTextContent = ref()
 const slotContainer = ref<HTMLElement>()
 
