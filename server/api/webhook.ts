@@ -19,10 +19,3 @@ router.post('/webhook', async(req, res) => {
 })
 
 export default router
-
-/**
- * @description: 111
- * @param: 
- * @returns 11333
- */
-const a = () => {}
