@@ -1,6 +1,7 @@
 <template>
   <Tip>最后更新 - 2024.06.24</Tip>
-  <Titleg>#模块化</Titleg  <Text>模块化是一种软件设计技术，用于将代码组织成独立、可重用、可维护的模块，目前拥有以下几种方案：</Text>
+  <Title>#模块化</Title>
+  <Text>模块化是一种软件设计技术，用于将代码组织成独立、可重用、可维护的模块，目前拥有以下几种方案：</Text>
   <List>`早期模块化`：通过立即调用函数表达式来创建一个局部作用域，从而避免全局污染</List>
   <List>`CommonJs`：用于 Node 的模块化标准，使用`require`和`module.exports`来导入和导出模块</List>
   <List>`AMD`：用于浏览器模块化的标准，使用`define`和`require`来定义和加载模块，适用于异步加载</List>
