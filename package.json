@@ -20,6 +20,7 @@
     "@types/node": "^20.12.7",
     "@vitejs/plugin-vue": "^5.0.4",
     "@vue/compiler-sfc": "^3.4.25",
+    "@vue/runtime-core": "^3.4.30",
     "@vueuse/core": "^10.10.0",
     "axios": "^1.7.2",
     "body-parser": "^1.20.2",

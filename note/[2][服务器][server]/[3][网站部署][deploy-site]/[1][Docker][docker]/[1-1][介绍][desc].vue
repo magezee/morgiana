@@ -109,11 +109,11 @@
     <List>数据卷容器</List>
   </Text>
   <Quote>待有空继续更新。。。</Quote>
+  
 </template>
 
 <script setup lang="ts">
-import { onMounted } from 'vue';
-import { Code, Line, Title, Text, Table, Image, List, Refer, Quote, Tip } from '../../../../page/component/note'
+import { onMounted } from 'vue'
 
 const emits = defineEmits([ 'noteContentMounted' ])
 

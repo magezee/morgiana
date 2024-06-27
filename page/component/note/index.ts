@@ -1,3 +1,5 @@
+import { type App } from 'vue'
+
 import Code from './Code.vue'
 import Line from './Line.vue'
 import Title from './Title.vue'
@@ -23,3 +25,20 @@ export {
   Tip,
   Api
 }
+
+const registerNoteCompoment = (app: App) => {
+  app.component('Code', Code)
+  app.component('Text', Text)
+  app.component('Title', Title)
+  app.component('Quote', Quote)
+  app.component('List', List)
+  app.component('Table', Table)
+  app.component('Line', Line)
+  app.component('Refer', Refer)
+  app.component('Image', Image)
+  app.component('Tip', Tip)
+  app.component('Api', Api)
+
+}
+
+export default registerNoteCompoment

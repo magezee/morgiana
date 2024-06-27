@@ -47,12 +47,10 @@
     ---
   `}}</Code>
   <Text>如果发现没有权限执行，则给个权限`chmod +x update-docker.sh`，以后启动docker就直接运行这个文件即可~</Text>
-
 </template>
 
 <script setup lang="ts">
-import { onMounted } from 'vue';
-import { Code, Line, Title, Text, Table, Image, List, Refer, Quote, Tip } from '../../../../page/component/note'
+import { onMounted } from 'vue'
 
 const emits = defineEmits([ 'noteContentMounted' ])
 

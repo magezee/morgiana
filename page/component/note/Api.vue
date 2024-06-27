@@ -28,7 +28,6 @@
     <div class="slot-container" ref="containerRef" v-else>
       <slot></slot>
     </div>
-    
   </div>
 </template>
 

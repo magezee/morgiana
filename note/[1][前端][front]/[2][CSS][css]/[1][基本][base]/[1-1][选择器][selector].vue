@@ -3,8 +3,7 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted } from 'vue';
-import { Code, Line, Title, Text } from '../../../../page/component/note/'
+import { onMounted } from 'vue'
 
 const emits = defineEmits([ 'noteContentMounted' ])
 

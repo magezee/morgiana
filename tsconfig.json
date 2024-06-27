@@ -18,8 +18,10 @@
     "page/**/*.d.ts", 
     "page/**/*.vue", 
     "page/**/*.ts", 
+    "note/**/*.vue",
     "main.ts", 
     "env.d.ts", 
+    "components.d.ts",
     "routes.ts", 
     "note/ouline.ts",
     "page/component/note/prism/load-languages.js"

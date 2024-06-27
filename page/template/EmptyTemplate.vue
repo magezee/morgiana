@@ -1,10 +1,12 @@
 <template>
-
+  <Tip>最后更新 - 2024.00.00</Tip>
+  <Title>#标题</Title>
+  <Text>待补充</Text>
+  <Line></Line>
 </template>
 
 <script setup lang="ts">
-import { onMounted } from 'vue';
-// import { Code, Line, Title, Text, Table, Image, List, Refer, Quote, Tip } from '../../../../page/component/note'
+import { onMounted } from 'vue'
 
 const emits = defineEmits([ 'noteContentMounted' ])
 

@@ -221,11 +221,11 @@
     多阶段构建还有一个特点就是，可以单独为一个阶段构建镜像，如需要单独构建上面例子中的`build`阶段，可以执行以下命令:
     `docker build --target builde -t project-builder-image .`
   </Text>
+  
 </template>
 
 <script setup lang="ts">
-import { onMounted } from 'vue';
-import { Code, Line, Title, Text, Table, Image, List, Refer, Quote, Tip } from '../../../../page/component/note'
+import { onMounted } from 'vue'
 
 const emits = defineEmits([ 'noteContentMounted' ])
 

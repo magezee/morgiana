@@ -20,6 +20,9 @@ dependencies:
   '@vue/compiler-sfc':
     specifier: ^3.4.25
     version: 3.4.25
+  '@vue/runtime-core':
+    specifier: ^3.4.30
+    version: 3.4.30
   '@vueuse/core':
     specifier: ^10.10.0
     version: 10.10.0(vue@3.4.25)
@@ -644,11 +647,24 @@ packages:
       '@vue/shared': 3.4.25
     dev: false
 
+  /@vue/reactivity@3.4.30:
+    resolution: {integrity: sha512-bVJurnCe3LS0JII8PPoAA63Zd2MBzcKrEzwdQl92eHCcxtIbxD2fhNwJpa+KkM3Y/A4T5FUnmdhgKwOf6BfbcA==}
+    dependencies:
+      '@vue/shared': 3.4.30
+    dev: false
+
   /@vue/runtime-core@3.4.25:
     resolution: {integrity: sha512-3qhsTqbEh8BMH3pXf009epCI5E7bKu28fJLi9O6W+ZGt/6xgSfMuGPqa5HRbUxLoehTNp5uWvzCr60KuiRIL0Q==}
     dependencies:
       '@vue/reactivity': 3.4.25
       '@vue/shared': 3.4.25
+    dev: false
+
+  /@vue/runtime-core@3.4.30:
+    resolution: {integrity: sha512-qaFEbnNpGz+tlnkaualomogzN8vBLkgzK55uuWjYXbYn039eOBZrWxyXWq/7qh9Bz2FPifZqGjVDl/FXiq9L2g==}
+    dependencies:
+      '@vue/reactivity': 3.4.30
+      '@vue/shared': 3.4.30
     dev: false
 
   /@vue/runtime-dom@3.4.25:
@@ -671,6 +687,10 @@ packages:
 
   /@vue/shared@3.4.25:
     resolution: {integrity: sha512-k0yappJ77g2+KNrIaF0FFnzwLvUBLUYr8VOwz+/6vLsmItFp51AcxLL7Ey3iPd7BIRyWPOcqUjMnm7OkahXllA==}
+    dev: false
+
+  /@vue/shared@3.4.30:
+    resolution: {integrity: sha512-CLg+f8RQCHQnKvuHY9adMsMaQOcqclh6Z5V9TaoMgy0ut0tz848joZ7/CYFFyF/yZ5i2yaw7Fn498C+CNZVHIg==}
     dev: false
 
   /@vueuse/core@10.10.0(vue@3.4.25):

@@ -82,7 +82,6 @@ const moveDetailImgByScroll = () => {
   }
 }
 
-
 </script>
 
 <style scoped lang="less">

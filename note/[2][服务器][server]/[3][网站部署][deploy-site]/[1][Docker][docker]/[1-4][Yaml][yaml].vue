@@ -146,11 +146,13 @@
         sex: boy
     ---
   `}}</Code>
+  
+  
+  
 </template>
 
 <script setup lang="ts">
-import { onMounted } from 'vue';
-import { Code, Line, Title, Text, Table, Image, List, Refer, Quote, Tip } from '../../../../page/component/note'
+import { onMounted } from 'vue'
 
 const emits = defineEmits([ 'noteContentMounted' ])
 

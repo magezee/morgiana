@@ -39,8 +39,6 @@
         <NoteNavbar :noteContentLoaded="noteContentLoaded" />
       </div>
     </div>
-    
-    
   </div>
 </template>
 
