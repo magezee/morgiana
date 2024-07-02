@@ -76,6 +76,41 @@ export const outline = [
           pathName: "front--js--data--prototype",
           notePath: "[1][前端][front]/[1][JS][js]/[2][数据][data]/[2-2][原型链][prototype].vue"
         },
+        {
+          desc: "构造函数",
+          id: "constructor",
+          number: "2-3",
+          pathName: "front--js--data--constructor",
+          notePath: "[1][前端][front]/[1][JS][js]/[2][数据][data]/[2-3][构造函数][constructor].vue"
+        },
+        {
+          desc: "Class",
+          id: "class",
+          number: "2-4",
+          pathName: "front--js--data--class",
+          notePath: "[1][前端][front]/[1][JS][js]/[2][数据][data]/[2-4][Class][class].vue"
+        },
+        {
+          desc: "Object",
+          id: "object",
+          number: "2-5",
+          pathName: "front--js--data--object",
+          notePath: "[1][前端][front]/[1][JS][js]/[2][数据][data]/[2-5][Object][object].vue"
+        },
+        {
+          desc: "Function",
+          id: "function",
+          number: "2-6",
+          pathName: "front--js--data--function",
+          notePath: "[1][前端][front]/[1][JS][js]/[2][数据][data]/[2-6][Function][function].vue"
+        },
+        {
+          desc: "Array",
+          id: "array",
+          number: "2-7",
+          pathName: "front--js--data--array",
+          notePath: "[1][前端][front]/[1][JS][js]/[2][数据][data]/[2-7][Array][array].vue"
+        },
         ]
       },
       ]

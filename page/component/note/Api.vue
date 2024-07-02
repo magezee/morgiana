@@ -3,26 +3,26 @@
     <div class="api-content" v-if="apiInfo">
       <div class="api-code">
         <SvgIcon class="api-icon" id="api" :useExternalColor="true"></SvgIcon>
-        <span>{{ apiInfo.api }}</span>
+        <span v-html="apiInfo.api" />
       </div>
       <div class="api-desc">
         <SvgIcon class="explain-icon" id="explain" :useExternalColor="true"></SvgIcon>
-        <span>{{ apiInfo.desc }}</span>
+        <span v-html="apiInfo.desc" />
       </div>
       <div class="api-params-list" v-show="apiInfo.params?.[0]?.name">
         <SvgIcon class="params-icon" id="params" :useExternalColor="true"></SvgIcon>
         <span>参数列表：</span>
         <div class="api-params" v-for="apiParams in apiInfo.params">
           
-          <span class="parmas-name">{{ apiParams.name }}</span>
-          <span class="parmas-desc">{{ apiParams.desc }}</span>
+          <span class="parmas-name" v-html="apiParams.name" />
+          <span class="parmas-desc" v-html="apiParams.desc" />
         </div>
       </div>
       
       <div class="api-return" v-if="apiInfo.return?.name">
         <SvgIcon class="return-icon" id="return" :useExternalColor="true"></SvgIcon>
-        <span class="return-name">{{ apiInfo.return.name }}</span>
-        <span>{{ apiInfo.return.desc}}</span>
+        <span class="return-name" v-html="apiInfo.return.name" />
+        <span v-html="apiInfo.return.desc" />
       </div>
     </div>
     <div class="slot-container" ref="containerRef" v-else>
@@ -59,10 +59,11 @@ const formatData = (apiInfo: string) => {
       pre[keyword] = splitInfo[1]
     } 
     else {
-      const descStrArr = splitInfo[1].split(']')
+      const descName = splitInfo[1].match(/^\[.*\]/g)?.[0]!
+
       const descData = {
-        name: descStrArr[0].replace('[', ''),
-        desc: descStrArr[1]
+        name: descName.slice(1, -1),
+        desc: splitInfo[1].replace(descName, '')
       }
 
       if (keyword === 'params') {

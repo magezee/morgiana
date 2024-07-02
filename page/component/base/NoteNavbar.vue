@@ -16,13 +16,15 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref, computed, watchEffect, onUnmounted, watch } from 'vue';
+import { onMounted, ref, computed, watchEffect, onUnmounted, watch } from 'vue'
+import { useRoute } from 'vue-router'
 import { useThrottleFn } from '@vueuse/core'
 
 interface NoteNavbarProps {
   noteContentLoaded: boolean
 }
 
+const route = useRoute()
 const props = defineProps<NoteNavbarProps>()
 
 const navStrucure = ref<Array<Element>>()
@@ -59,6 +61,17 @@ const updateAnchorList = () => {
     })!
   })
 }
+
+// 直接输入锚点链接也可以跳转
+onMounted(() => {
+  setTimeout(() => {
+    const currentAnchorId = Number(route.hash?.replace('#anchor-', ''))
+    if(currentAnchorId) {
+      scrollToTargetAnchor(currentAnchorId, anchorList.value[currentAnchorId]?.offsetTop)
+    }
+    
+  }, 500)
+})
 
 onUnmounted(() => {
   window.removeEventListener('scroll', updateTargetAnchorByScroll)
