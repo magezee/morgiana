@@ -111,6 +111,27 @@ export const outline = [
           pathName: "front--js--data--array",
           notePath: "[1][前端][front]/[1][JS][js]/[2][数据][data]/[2-7][Array][array].vue"
         },
+        {
+          desc: "String",
+          id: "string",
+          number: "2-8",
+          pathName: "front--js--data--string",
+          notePath: "[1][前端][front]/[1][JS][js]/[2][数据][data]/[2-8][String][string].vue"
+        },
+        {
+          desc: "RegExp",
+          id: "regexp",
+          number: "2-9",
+          pathName: "front--js--data--regexp",
+          notePath: "[1][前端][front]/[1][JS][js]/[2][数据][data]/[2-9][RegExp][regexp].vue"
+        },
+        {
+          desc: "Number",
+          id: "number",
+          number: "2-10",
+          pathName: "front--js--data--number",
+          notePath: "[1][前端][front]/[1][JS][js]/[2][数据][data]/[2-10][Number][number].vue"
+        },
         ]
       },
       ]

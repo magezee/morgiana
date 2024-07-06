@@ -36,12 +36,13 @@
  * <Api>
     @api - array.reduce(callback, initValue?)
     @desc - 从后向前遍历数组，每个元素都执行一遍从
-    @params - [callback:Function]参数说明
-    @params - [initValue]参数说明
-    @return - [undefine]返回值说明
+    @params - [callback:Function] 参数说明
+    @params - [initValue] 参数说明
+    @return - [undefine] 返回值说明
   </Api>
  */
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, nextTick } from 'vue'
+import { useMarkdownText } from '../../hook/note'
 
 import SvgIcon from '../ui/SvgIcon.vue'
 
@@ -59,10 +60,10 @@ const formatData = (apiInfo: string) => {
       pre[keyword] = splitInfo[1]
     } 
     else {
-      const descName = splitInfo[1].match(/^\[.*\]/g)?.[0]!
+      const descName = splitInfo[1].match(/^\[.*\] /g)?.[0]!
 
       const descData = {
-        name: descName.slice(1, -1),
+        name: descName.slice(1, -2),
         desc: splitInfo[1].replace(descName, '')
       }
 
@@ -80,6 +81,20 @@ const formatData = (apiInfo: string) => {
 
 onMounted(() => {
   apiInfo.value = formatData(containerRef.value?.innerHTML!)
+
+  // 暂时先这样强制添加上marktext特性
+  nextTick(async () => {
+    apiInfo.value.desc = await useMarkdownText(apiInfo.value?.desc)
+    apiInfo.value?.params.forEach(async(item) => {
+      if (item) {
+        item.desc = await useMarkdownText(item.desc)
+      }
+    })
+    if (apiInfo.value.return) {
+      apiInfo.value.return.desc = await useMarkdownText(apiInfo.value.return.desc)
+    }
+  })
+  
 })
 
 </script>

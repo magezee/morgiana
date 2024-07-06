@@ -158,8 +158,8 @@
   <Api>
     @api - Object.create(obj)
     @desc - 创建一个空对象，同时将该对象的原型对象指定为 obj
-    @params - [obj : object]作为原型的对象
-    @return - [object]创建的对象
+    @params - [obj : object] 作为原型的对象
+    @return - [object] 创建的对象
   </Api>
   <Code>{{`
     ---ts(演示~)
@@ -173,10 +173,10 @@
   <Api>
     @api - Object.defineProperty(obj, key, config)
     @desc - 新增或修改目标对象属性
-    @params - [obj : object]目标对象
-    @params - [key : string]新增或修改的属性
-    @params - [config : object]数据描述符对象
-    @return - [object]修改后的目标对象
+    @params - [obj : object] 目标对象
+    @params - [key : string] 新增或修改的属性
+    @params - [config : object] 数据描述符对象
+    @return - [object] 修改后的目标对象
   </Api>
   <Code>{{`
     ---ts(演示~)
@@ -190,8 +190,8 @@
   <Api>
     @api - Object.getOwnPropertyDescriptors(obj)
     @desc - 获取目标对象上所有自身属性的描述符配置
-    @params - [obj : object]目标对象
-    @return - [object]描述符配置
+    @params - [obj : object] 目标对象
+    @return - [object] 描述符配置
   </Api>
   <Code>{{`
     ---ts(演示~)
@@ -213,9 +213,9 @@
   <Api>
     @api - Object.getOwnPropertyDescriptor(obj, key)
     @desc - 获取目标对象上自身单个属性的描述符配置
-    @params - [obj : object]目标对象
-    @params - [key : string]目标属性
-    @return - [object]描述符配置
+    @params - [obj : object] 目标对象
+    @params - [key : string] 目标属性
+    @return - [object] 描述符配置
   </Api>
   <Code>{{`
     ---ts(演示~)
@@ -229,8 +229,8 @@
   <Api>
     @api - Object.preventExtensions(obj)
     @desc - 将目标对象设置为不可扩展的，即无法为其添加属性
-    @params - [obj : object]目标对象
-    @return - [object]修改后的目标对象
+    @params - [obj : object] 目标对象
+    @return - [object] 修改后的目标对象
   </Api>
   <Code>{{`
     ---ts(演示~)
@@ -249,8 +249,8 @@
   <Api>
     @api - Oject.is(value1, value2)
     @desc - 与 === 功能一致，不过修复了一些缺陷
-    @params - [value1、value2 : any]要比较的值
-    @return - [boolean]判断结果
+    @params - [value1、value2 : any] 要比较的值
+    @return - [boolean] 判断结果
   </Api>
   <Code>{{`
     ---ts(演示~)
@@ -265,8 +265,8 @@
   <Api>
     @api - Object.isExtensible(obj)
     @desc - 判断目标对象是否可扩展
-    @params - [obj : object]目标对象
-    @return - [boolean]判断结果
+    @params - [obj : object] 目标对象
+    @return - [boolean] 判断结果
   </Api>
   <Code>{{`
     ---ts(演示~)
@@ -282,8 +282,8 @@
   <Api>
     @api - object.propertyIsEnumerable(key)
     @desc - 判断一个对象实例的某个属性是否可枚举
-    @params - [key : string]目标属性名
-    @return - [boolean]判断结果
+    @params - [key : string] 目标属性名
+    @return - [boolean] 判断结果
   </Api>
   <Code>{{`
     ---ts(演示~)
@@ -303,8 +303,8 @@
   <Api>
     @api - Object.keys(obj)
     @desc - 遍历对象自身可枚举属性并返回
-    @params - [obj : object]目标对象
-    @return - [Arrary&lt;string&gt;]存储 keys 的数组
+    @params - [obj : object] 目标对象
+    @return - [Arrary&lt;string&gt;] 存储 keys 的数组
   </Api>
   <Code>{{`
     ---ts(演示~)
@@ -322,8 +322,8 @@
   <Api>
     @api - Object.getOwnPropertyNames(obj)
     @desc - 遍历对象自身属性并返回
-    @params - [obj : object]目标对象
-    @return - [Arrary&lt;string&gt;]存储 keys 的数组
+    @params - [obj : object] 目标对象
+    @return - [Arrary&lt;string&gt;] 存储 keys 的数组
   </Api>
   <Code>{{`
     ---ts(演示~)
@@ -342,8 +342,8 @@
   <Api>
     @api - Object.vaules(obj)
     @desc - 遍历对象自身可枚举属性的值并返回
-    @params - [obj : object]目标对象
-    @return - [Arrary&lt;any&gt;]存储 values 的数组
+    @params - [obj : object] 目标对象
+    @return - [Arrary&lt;any&gt;] 存储 values 的数组
   </Api>
   <Code>{{`
     ---ts(演示~)
@@ -364,9 +364,9 @@
   <Api>
     @api - Object.assign(obj, ...source)
     @desc - 用于对象合并，将源对象的所有可枚举属性浅拷贝到目标对象，如果源对象有目标对象同名属性，则进行覆盖
-    @params - [obj : object]目标对象
-    @params - [source : object]源对象
-    @return - [object]合并后的目标对象
+    @params - [obj : object] 目标对象
+    @params - [source : object] 源对象
+    @return - [object] 合并后的目标对象
   </Api>
   <Code>{{`
     ---ts(演示~)
@@ -387,8 +387,8 @@
   <Api>
     @api - Object.entries(obj)
     @desc - 遍历对象自身可枚举属性的 key-value 数组并返回
-    @params - [obj : object]目标对象
-    @return - [Arrary&lt;[string, any]&gt;]存储 key-value 的数组
+    @params - [obj : object] 目标对象
+    @return - [Arrary&lt;[string, any]&gt;] 存储 key-value 的数组
   </Api>
   <Code>{{`
     ---ts(演示~)
@@ -406,8 +406,8 @@
   <Api>
     @api - Object.fromEntries(array)
     @desc - 上面方法的逆向，将一个 key-value 数组转换为对象
-    @params - [array : Arrary&lt;[string, any]&gt;]目标数组
-    @return - [object]转换后的对象
+    @params - [array : Arrary&lt;[string, any]&gt;] 目标数组
+    @return - [object] 转换后的对象
   </Api>
   <Code>{{`
     ---ts(演示~)
@@ -426,9 +426,9 @@
   <Api>
     @api - Object.setPrototypeOf(obj, prototype)
     @desc - 将 obj 的原型对象设置为 prototype ，此方法用于替代传统建立原型链的方式
-    @params - [obj : object]目标对象
-    @params - [prototype : object]要设置为原型的对象
-    @return - [object]设置后的目标对象
+    @params - [obj : object] 目标对象
+    @params - [prototype : object] 要设置为原型的对象
+    @return - [object] 设置后的目标对象
   </Api>
   <Code>{{`
     ---ts(演示~)
@@ -444,8 +444,8 @@
   <Api>
     @api - Object.getPrototypeOf(obj)
     @desc - 获取目标对象的原型
-    @params - [obj : object]目标对象
-    @return - [object]原型
+    @params - [obj : object] 目标对象
+    @return - [object] 原型
   </Api>
   <Code>{{`
     ---ts(演示~)
@@ -461,8 +461,8 @@
   <Api>
     @api - object.hasOwnProperty(key)
     @desc - 判断实例对象的指定属性是否为自身存在而非原型链上继承
-    @params - [key : string]目标属性名
-    @return - [boolean]判断结果
+    @params - [key : string] 目标属性名
+    @return - [boolean] 判断结果
   </Api>
   <Code>{{`
     ---ts(演示~)

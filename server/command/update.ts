@@ -82,6 +82,20 @@ const getNoteOutline = () => {
       })
     }
   })
+
+  // 按默认文件名排序会有问题，如2-10会排在2-1之前，因此这里手动排序一下
+  noteOutline.forEach((type) => {
+    type.sort.forEach((sort) => {
+      sort.list.forEach((list) => {
+        list.source.sort((a, b) => {
+          const numberA = a.number.split('-')[1]
+          const numberB = b.number.split('-')[1]
+          return numberA - numberB
+        })
+      })
+    })
+  })
+  
   return noteOutline
 }
 
