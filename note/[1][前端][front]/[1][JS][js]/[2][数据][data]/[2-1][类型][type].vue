@@ -1,4 +1,5 @@
 <template>
+  <Tip>最后更新 - 2024.06.27</Tip>
   <Title>类型</Title>
   <Text>
     JS 的数据类型分为两大类:

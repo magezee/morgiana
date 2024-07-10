@@ -132,6 +132,41 @@ export const outline = [
           pathName: "front--js--data--number",
           notePath: "[1][前端][front]/[1][JS][js]/[2][数据][data]/[2-10][Number][number].vue"
         },
+        {
+          desc: "Math",
+          id: "math",
+          number: "2-11",
+          pathName: "front--js--data--math",
+          notePath: "[1][前端][front]/[1][JS][js]/[2][数据][data]/[2-11][Math][math].vue"
+        },
+        {
+          desc: "Symbol",
+          id: "symbol",
+          number: "2-12",
+          pathName: "front--js--data--symbol",
+          notePath: "[1][前端][front]/[1][JS][js]/[2][数据][data]/[2-12][Symbol][symbol].vue"
+        },
+        {
+          desc: "Map",
+          id: "map",
+          number: "2-13",
+          pathName: "front--js--data--map",
+          notePath: "[1][前端][front]/[1][JS][js]/[2][数据][data]/[2-13][Map][map].vue"
+        },
+        {
+          desc: "Set",
+          id: "set",
+          number: "2-14",
+          pathName: "front--js--data--set",
+          notePath: "[1][前端][front]/[1][JS][js]/[2][数据][data]/[2-14][Set][set].vue"
+        },
+        {
+          desc: "Promise",
+          id: "promise",
+          number: "2-15",
+          pathName: "front--js--data--promise",
+          notePath: "[1][前端][front]/[1][JS][js]/[2][数据][data]/[2-15][Promise][promise].vue"
+        },
         ]
       },
       ]

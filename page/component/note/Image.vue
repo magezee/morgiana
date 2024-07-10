@@ -1,15 +1,22 @@
 <template>
   <div class="bg-mask" v-if="isViewDetail"></div>
-  <img 
-    ref="imgRef"
-    :class="['note--image', { 'detail': isViewDetail }]" 
-    :src="props.src" 
-    @click="viewDetailImage"
-  >
+  <div class="image-container">
+    <img class="loading" v-if="waitLoading" src="../../assets/img/loading.gif">
+    <img 
+      v-show="!waitLoading"
+      ref="imgRef"
+      :class="['note--image', { 'detail': isViewDetail }]" 
+      :src="props.src"
+      :onload="onImageLoad"
+      :on-error="onImageError"
+      @click="viewDetailImage"
+   >
+  </div>
+  
 </template>
 
 <script setup lang="ts">
-import { computed, ref } from 'vue'
+import { computed, ref, onMounted } from 'vue'
 
 
 const props=  defineProps<{
@@ -20,6 +27,9 @@ const props=  defineProps<{
 const imgWidth = computed(() => `${props.width}px`)
 const isViewDetail = ref(false)
 const imgRef = ref()
+const waitLoading = ref()
+const loadImg = ref()
+const timeout = ref(3000)   // 等待图片首次超时时间，超过还未完全加载完毕则呈现loading动画
 
 const detailImgScale = ref()
 const detailImgTranslateX = ref()
@@ -30,6 +40,23 @@ const imgTransform = computed(() => {
 
 const defaultScrollTop = ref()
 
+onMounted(() => {
+  // 组合式显示loading动画，超过1s未加载成功后才显示loading 否则有瞬闪效果有点恶心
+  setTimeout(() => {
+    if (!loadImg.value) {
+      waitLoading.value = true
+    }
+  }, timeout.value)
+})
+
+const onImageLoad = () => {
+  loadImg.value = true
+  waitLoading.value = false
+}
+
+const onImageError = () => {
+  waitLoading.value = true
+}
 
 const viewDetailImage = async() => {
   if (!props.width) return
@@ -99,24 +126,39 @@ const moveDetailImgByScroll = () => {
   cursor: zoom-out;
 }
 
-.note--image {
-  position: relative;
-  width: v-bind(imgWidth);
-  max-width: 100%;
-  border-radius: 5px;
-  border: .5px solid #ddd;
+.image-container {
   margin: 10px 0;
-  transition: .4s;
-  transform-origin: center;
-  cursor: zoom-in;
 
-  &.detail {
-    z-index: 30;
-    border-radius: 3px;
-    border-color: @Color[blue-light];
-    transform: v-bind(imgTransform);
+  .loading {
+    width: 250px;
+    height: 150px;
+    border-radius: 5px;
+    border: .5px solid #ddd;
+    cursor: pointer;
   }
+
+  .note--image {
+    position: relative;
+    width: v-bind(imgWidth);
+    max-width: 100%;
+    border-radius: 5px;
+    border: .5px solid #ddd;
+    transition: .4s;
+    transform-origin: center;
+    cursor: zoom-in;
+
+    &.detail {
+      z-index: 30;
+      border-radius: 3px;
+      border-color: @Color[blue-light];
+      transform: v-bind(imgTransform);
+    }
+  }
+
 }
+
+
+
 
 
 

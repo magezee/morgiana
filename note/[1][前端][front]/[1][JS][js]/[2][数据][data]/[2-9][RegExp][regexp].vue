@@ -294,6 +294,39 @@
     ---
   
   `}}</Code>
+  <Line></Line>
+
+  <Title>##API</Title>
+  <Api>
+    @api - regexp.exec(str)
+    @desc - 获取正则匹配信息
+    @params - [str : string] 被检验字符串
+    @return - [any[ ] | null] 一个检验信息数组，如果匹配不到则返回 null
+  </Api>
+  <Code>{{`
+    ---ts(演示)
+      const str = 'abcd 1234'
+      const reg = /^a../g
+
+      console.log(reg.exec(str))        // [ 'abc', index: 0, input: 'abcd 1234', groups: undefined ]
+    ---
+  `}}</Code>
+  <Line></Line>
+  <Api>
+    @api - regexp.test(str)
+    @desc - 检验字符串是否满足正则匹配
+    @params - [str : string] 被检验字符串
+    @return - [boolean] 检验结果
+  </Api>
+  <Code>{{`
+    ---ts(演示)
+      const str = 'abcd 1234'
+      const reg = /^a../g
+
+      console.log(reg.test(str))        // true
+    ---
+  `}}</Code>
+  
 
 </template>
 
