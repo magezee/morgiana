@@ -244,8 +244,9 @@ const copyToast = () => {
         height: 100%;
         position: fixed;
         left: 0;
-        padding: 10px 10px 0;
+        padding: 10px 10px 70px;
         border-right: 1px @Color[grey] solid;
+        overflow-y: auto;
         
         .note-sort-component {
           animation-name: mountNoteSort;

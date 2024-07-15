@@ -30,7 +30,7 @@ export const outline = [
       id: "js",
       list: [
       {
-        desc: "环境",
+        desc: "执行环境",
         id: "env",
         number: "1",
         source: [
@@ -39,26 +39,26 @@ export const outline = [
           id: "context",
           number: "1-1",
           pathName: "front--js--env--context",
-          notePath: "[1][前端][front]/[1][JS][js]/[1][环境][env]/[1-1][上下文][context].vue"
+          notePath: "[1][前端][front]/[1][JS][js]/[1][执行环境][env]/[1-1][上下文][context].vue"
         },
         {
           desc: "事件循环",
           id: "loop",
           number: "1-2",
           pathName: "front--js--env--loop",
-          notePath: "[1][前端][front]/[1][JS][js]/[1][环境][env]/[1-2][事件循环][loop].vue"
+          notePath: "[1][前端][front]/[1][JS][js]/[1][执行环境][env]/[1-2][事件循环][loop].vue"
         },
         {
           desc: "模块化",
           id: "module",
           number: "1-3",
           pathName: "front--js--env--module",
-          notePath: "[1][前端][front]/[1][JS][js]/[1][环境][env]/[1-3][模块化][module].vue"
+          notePath: "[1][前端][front]/[1][JS][js]/[1][执行环境][env]/[1-3][模块化][module].vue"
         },
         ]
       },
       {
-        desc: "数据",
+        desc: "数据类型",
         id: "data",
         number: "2",
         source: [
@@ -67,105 +67,168 @@ export const outline = [
           id: "type",
           number: "2-1",
           pathName: "front--js--data--type",
-          notePath: "[1][前端][front]/[1][JS][js]/[2][数据][data]/[2-1][类型][type].vue"
+          notePath: "[1][前端][front]/[1][JS][js]/[2][数据类型][data]/[2-1][类型][type].vue"
         },
         {
           desc: "原型链",
           id: "prototype",
           number: "2-2",
           pathName: "front--js--data--prototype",
-          notePath: "[1][前端][front]/[1][JS][js]/[2][数据][data]/[2-2][原型链][prototype].vue"
+          notePath: "[1][前端][front]/[1][JS][js]/[2][数据类型][data]/[2-2][原型链][prototype].vue"
         },
         {
           desc: "构造函数",
           id: "constructor",
           number: "2-3",
           pathName: "front--js--data--constructor",
-          notePath: "[1][前端][front]/[1][JS][js]/[2][数据][data]/[2-3][构造函数][constructor].vue"
+          notePath: "[1][前端][front]/[1][JS][js]/[2][数据类型][data]/[2-3][构造函数][constructor].vue"
         },
         {
           desc: "Class",
           id: "class",
           number: "2-4",
           pathName: "front--js--data--class",
-          notePath: "[1][前端][front]/[1][JS][js]/[2][数据][data]/[2-4][Class][class].vue"
+          notePath: "[1][前端][front]/[1][JS][js]/[2][数据类型][data]/[2-4][Class][class].vue"
         },
         {
           desc: "Object",
           id: "object",
           number: "2-5",
           pathName: "front--js--data--object",
-          notePath: "[1][前端][front]/[1][JS][js]/[2][数据][data]/[2-5][Object][object].vue"
+          notePath: "[1][前端][front]/[1][JS][js]/[2][数据类型][data]/[2-5][Object][object].vue"
         },
         {
           desc: "Function",
           id: "function",
           number: "2-6",
           pathName: "front--js--data--function",
-          notePath: "[1][前端][front]/[1][JS][js]/[2][数据][data]/[2-6][Function][function].vue"
+          notePath: "[1][前端][front]/[1][JS][js]/[2][数据类型][data]/[2-6][Function][function].vue"
         },
         {
           desc: "Array",
           id: "array",
           number: "2-7",
           pathName: "front--js--data--array",
-          notePath: "[1][前端][front]/[1][JS][js]/[2][数据][data]/[2-7][Array][array].vue"
+          notePath: "[1][前端][front]/[1][JS][js]/[2][数据类型][data]/[2-7][Array][array].vue"
         },
         {
           desc: "String",
           id: "string",
           number: "2-8",
           pathName: "front--js--data--string",
-          notePath: "[1][前端][front]/[1][JS][js]/[2][数据][data]/[2-8][String][string].vue"
+          notePath: "[1][前端][front]/[1][JS][js]/[2][数据类型][data]/[2-8][String][string].vue"
         },
         {
           desc: "RegExp",
           id: "regexp",
           number: "2-9",
           pathName: "front--js--data--regexp",
-          notePath: "[1][前端][front]/[1][JS][js]/[2][数据][data]/[2-9][RegExp][regexp].vue"
+          notePath: "[1][前端][front]/[1][JS][js]/[2][数据类型][data]/[2-9][RegExp][regexp].vue"
         },
         {
           desc: "Number",
           id: "number",
           number: "2-10",
           pathName: "front--js--data--number",
-          notePath: "[1][前端][front]/[1][JS][js]/[2][数据][data]/[2-10][Number][number].vue"
+          notePath: "[1][前端][front]/[1][JS][js]/[2][数据类型][data]/[2-10][Number][number].vue"
         },
         {
           desc: "Math",
           id: "math",
           number: "2-11",
           pathName: "front--js--data--math",
-          notePath: "[1][前端][front]/[1][JS][js]/[2][数据][data]/[2-11][Math][math].vue"
+          notePath: "[1][前端][front]/[1][JS][js]/[2][数据类型][data]/[2-11][Math][math].vue"
         },
         {
           desc: "Symbol",
           id: "symbol",
           number: "2-12",
           pathName: "front--js--data--symbol",
-          notePath: "[1][前端][front]/[1][JS][js]/[2][数据][data]/[2-12][Symbol][symbol].vue"
+          notePath: "[1][前端][front]/[1][JS][js]/[2][数据类型][data]/[2-12][Symbol][symbol].vue"
         },
         {
           desc: "Map",
           id: "map",
           number: "2-13",
           pathName: "front--js--data--map",
-          notePath: "[1][前端][front]/[1][JS][js]/[2][数据][data]/[2-13][Map][map].vue"
+          notePath: "[1][前端][front]/[1][JS][js]/[2][数据类型][data]/[2-13][Map][map].vue"
         },
         {
           desc: "Set",
           id: "set",
           number: "2-14",
           pathName: "front--js--data--set",
-          notePath: "[1][前端][front]/[1][JS][js]/[2][数据][data]/[2-14][Set][set].vue"
+          notePath: "[1][前端][front]/[1][JS][js]/[2][数据类型][data]/[2-14][Set][set].vue"
         },
         {
           desc: "Promise",
           id: "promise",
           number: "2-15",
           pathName: "front--js--data--promise",
-          notePath: "[1][前端][front]/[1][JS][js]/[2][数据][data]/[2-15][Promise][promise].vue"
+          notePath: "[1][前端][front]/[1][JS][js]/[2][数据类型][data]/[2-15][Promise][promise].vue"
+        },
+        ]
+      },
+      {
+        desc: "Typescript",
+        id: "typescript",
+        number: "3",
+        source: [
+        {
+          desc: "介绍",
+          id: "desc",
+          number: "3-1",
+          pathName: "front--js--typescript--desc",
+          notePath: "[1][前端][front]/[1][JS][js]/[3][Typescript][typescript]/[3-1][介绍][desc].vue"
+        },
+        {
+          desc: "声明文件",
+          id: "declare",
+          number: "3-2",
+          pathName: "front--js--typescript--declare",
+          notePath: "[1][前端][front]/[1][JS][js]/[3][Typescript][typescript]/[3-2][声明文件][declare].vue"
+        },
+        {
+          desc: "数据结构",
+          id: "data",
+          number: "3-3",
+          pathName: "front--js--typescript--data",
+          notePath: "[1][前端][front]/[1][JS][js]/[3][Typescript][typescript]/[3-3][数据结构][data].vue"
+        },
+        {
+          desc: "类型",
+          id: "type",
+          number: "3-4",
+          pathName: "front--js--typescript--type",
+          notePath: "[1][前端][front]/[1][JS][js]/[3][Typescript][typescript]/[3-4][类型][type].vue"
+        },
+        {
+          desc: "类型场景",
+          id: "scene",
+          number: "3-5",
+          pathName: "front--js--typescript--scene",
+          notePath: "[1][前端][front]/[1][JS][js]/[3][Typescript][typescript]/[3-5][类型场景][scene].vue"
+        },
+        ]
+      },
+      {
+        desc: "代码技巧",
+        id: "technique",
+        number: "4",
+        source: [
+        {
+          desc: "符号",
+          id: "symbol",
+          number: "4-1",
+          pathName: "front--js--technique--symbol",
+          notePath: "[1][前端][front]/[1][JS][js]/[4][代码技巧][technique]/[4-1][符号][symbol].vue"
+        },
+        {
+          desc: "技巧",
+          id: "skill",
+          number: "4-2",
+          pathName: "front--js--technique--skill",
+          notePath: "[1][前端][front]/[1][JS][js]/[4][代码技巧][technique]/[4-2][技巧][skill].vue"
         },
         ]
       },

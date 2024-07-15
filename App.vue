@@ -22,6 +22,10 @@ html, body {
     font-family: FZFWZhuZiAYuanJM;
     src:url('./page/assets/font/FZFWZhuZiAYuanJM.OTF');
   }
+  @font-face {
+    font-family: SourceHanSansSubset;
+    src:url('./page/assets/font/SourceHanSansCN-Medium.otf');
+  }
 
   position: relative;
   width: 100%;

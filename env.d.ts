@@ -6,7 +6,6 @@ declare module '*.vue' {
   export default component
 }
 
-
 declare module '*.js' {
   const module: any
   export default module
