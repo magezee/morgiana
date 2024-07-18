@@ -159,7 +159,6 @@ const jumpNote = (routePath) => {
     .note-sort {
       display: flex;
       flex-wrap: wrap;
-      flex-direction: column;
       gap: 25px;
       padding: 0 10px;
 

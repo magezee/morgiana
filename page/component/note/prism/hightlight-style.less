@@ -67,6 +67,15 @@
       .regex-flags {
         color: #569CD6;
       }
+
+      .script {
+        color: #9cdcfe;
+        
+        .punctuation {
+          color: #d4d4d4;
+        }
+      }
+      
     }
 
 
@@ -122,17 +131,81 @@
 
   // 语言的默认颜色
   code[class*="language-js"],
+  code[class*="language-javascript"]
   code[class*="language-jsx"],
   code[class*="language-ts"],
   code[class*="language-tsx"]
   {
     color: #9cdcfe;
+
+    
   }
+
+  code[class*="language-tsx"],
+  code[class*="language-jsx"]
+  {
+    .token {
+
+      &.tag {
+        .punctuation {
+          color: rgba(212,212,212, .3);
+        }
+      }
+      
+
+      &.attr-value {
+        .punctuation.attr-equals {
+          color: #d4d4d4;
+        }
+        .punctuation {
+          color: #ce9178;
+        }
+      }
+
+      &.script.language-javascript {
+        .punctuation,
+        .operator {
+          color: #d4d4d4;
+        }
+      }
+    }
+  }
+
 
   code[class*="css"],
   code[class*="less"],
   code[class*="scss"] 
   {
     color: #ce9178;
+  }
+
+
+  code[class*="html"] {
+    .token {
+      &.tag {
+        .punctuation {
+          color: rgba(212,212,212, .3);
+        }
+      }
+
+      &.attr-value {
+        .punctuation.attr-equals {
+          color: #d4d4d4;
+        }
+        .punctuation {
+          color: #ce9178;
+        }
+      }
+
+      
+    } 
+
+    .doctype {
+      color: #569cd6;
+
+      .punctuation {
+        color: #569cd6;
+      }
+    }
   }
 }
