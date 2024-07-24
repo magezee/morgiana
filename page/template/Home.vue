@@ -78,6 +78,8 @@ onMounted(() => {
 
 <style lang="less">
 @import url('../style/variables.less');
+@import url('../style/minxin.less');
+
 .mountCardAnimation(@name, @delay) {
   animation-name: @name;
   animation-delay: @delay;
@@ -92,17 +94,33 @@ onMounted(() => {
   position: relative;
   user-select: none;
 
+  .moblie-navabr {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    background-color: #fff;
+    height: 150px;
+    z-index: 1;
+
+    .responsive(@pc, {
+      display: none
+    });
+  }
+
   .home-container {
     display: flex;
     position: relative;
     height: 100%;
     padding: calc(25vh + 20px) 0 24px 0;
     margin: 0 150px;
-    
 
     @media screen and (max-width: 1500px){
       margin: 0 50px;
     }
+
+    .responsive(@h5, {
+      margin: 0;
+    });
 
     .home-container--left {
       @media screen and (max-width: 1200px){
@@ -114,6 +132,10 @@ onMounted(() => {
       flex-shrink: 0; 
       gap: 10px;
       transition: .2s;
+
+      .responsive(@h5, {
+        display: none;
+      });
 
       .personal-info {
         display: flex;
@@ -169,7 +191,12 @@ onMounted(() => {
       flex: 1;
       min-width: 600px;
       margin: 0 20px;
-      //.mountCardAnimation(mountedMiddleCard, 0);
+
+      .responsive(@h5, {
+        min-width: 0;
+        width: 100vw;
+        margin: 10px;
+      });
 
       .scroll-container {
         height: 100%;
@@ -184,6 +211,10 @@ onMounted(() => {
         text-align: center;
         color: @Color[mono-v3];
         transform: translateX(-50%);
+
+        .responsive(@h5, {
+          display: none;
+        });
       }
     }
 
@@ -197,16 +228,31 @@ onMounted(() => {
       flex-shrink: 0;
       transition: .2s;
 
+      .responsive(@h5, {
+        position: fixed;
+        top: 5px;
+      });
+
       .dash-board {
         margin-bottom: 10px;
         .mountCardAnimation(mountedRgightCard, 0);
-        
+
+        .responsive(@h5, {
+          width: 100vw;
+          height: 6vh;
+          margin: 0;
+          padding: 5px;
+        });
       }
 
       .recent-update {
         flex: 1;
         transform: translateX(6px);
         .mountCardAnimation(mountedRgightCard, .2s);
+        
+        .responsive(@h5, {
+          display: none;
+        });
       }
     }
   }

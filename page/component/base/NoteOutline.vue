@@ -34,8 +34,6 @@ const selectSort = (notePathName) => {
   border: 1px solid #ddd;
   box-shadow: 4px 2px 5px @Color[grey-light];
   
-  
-  
   .note-type {
     display: flex;
     flex-direction: column;

@@ -1,0 +1,10 @@
+// 定义默认的断点值  
+@h5: ~"only screen and (max-width: 1024px)";  
+@pc: ~"only screen and (min-width: 1025px)";  
+
+// 定义带块参数的媒体查询混合  
+.responsive(@breakpoint, @rules) {  
+  @media @breakpoint {  
+    @rules();  
+  }  
+}  

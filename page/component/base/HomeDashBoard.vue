@@ -71,6 +71,7 @@ const dashBoardAction = (menuId) => {
 
 <style scoped lang="less">
 @import url('../../style/variables.less');
+@import url('../../style/minxin.less');
 
 .home--dash-board {
   display: flex;
@@ -79,18 +80,35 @@ const dashBoardAction = (menuId) => {
   font-size: 18px;
   line-height: 1.4;
 
+  .responsive(@h5, {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    height: 100%;
+    margin: 0 20px;
+    overflow-x: auto;
+  });
+
   .dash-board--menu {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 2px 12px;
     border-radius: 8px;
-    // border: 1px solid #c9a494;
     margin: 10px 0;
     font-weight: 600;
     color: #c9a494;
     transition: .2s;
     cursor: pointer;
+
+    .responsive(@h5, {
+      flex-shrink: 0;
+      width: 25%;
+      padding: 0;
+      margin: 0;
+      
+      
+    });
 
     &:hover {
       transform: scale(1.2);

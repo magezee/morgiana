@@ -1,12 +1,18 @@
 <template>
-  <div class="1">less</div>
+  <Tip>最后更新 - 2024.00.00</Tip>
+  <Title>#Less</Title>
+  <Text>待补充</Text>
+  <Line></Line>
 </template>
 
 <script setup lang="ts">
-import { type Router, RouterView } from 'vue-router'
+import { onMounted } from 'vue'
 
-// 动态加载组件
+const emits = defineEmits([ 'noteContentMounted' ])
 
+onMounted(() => {
+  emits('noteContentMounted')
+})
 
 </script>
 

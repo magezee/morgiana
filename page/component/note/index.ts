@@ -11,6 +11,7 @@ import Refer from './Refer.vue'
 import Quote from './Quote.vue'
 import Tip from './Tip.vue'
 import Api from './Api.vue'
+import ShowCss from './ShowCss.vue'
 
 export {
   Code,
@@ -23,7 +24,8 @@ export {
   Refer,
   Quote,
   Tip,
-  Api
+  Api,
+  ShowCss
 }
 
 const registerNoteCompoment = (app: App) => {
@@ -38,6 +40,7 @@ const registerNoteCompoment = (app: App) => {
   app.component('Image', Image)
   app.component('Tip', Tip)
   app.component('Api', Api)
+  app.component('ShowCss', ShowCss)
 
 }
 

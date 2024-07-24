@@ -1,5 +1,8 @@
 <template>
-  <div class="1">选择器</div>
+  <Tip>最后更新 - 2024.00.00</Tip>
+  <Title>#选择器</Title>
+  <Text>待补充</Text>
+  <Line></Line>
 </template>
 
 <script setup lang="ts">
@@ -10,9 +13,6 @@ const emits = defineEmits([ 'noteContentMounted' ])
 onMounted(() => {
   emits('noteContentMounted')
 })
-
-// 动态加载组件
-
 
 </script>
 

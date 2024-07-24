@@ -15,12 +15,12 @@
         
       </div>
       <div class="more-info">
-        <SvgIcon class="more-icon" id="more" :useExternalColor="true"/>
+        <SvgIcon class="more-icon" id="more" :useExternalColor="true" @click="showNoteSortInMobile=!showNoteSortInMobile" />
       </div>
     </div>
 
     <div class="note-main">
-      <div class="note-sort-container">
+      <div :class="['note-sort-container', { 'show-in-mobile': showNoteSortInMobile }]">
         <div class="fixed-container">
           <NoteSort 
             class="note-sort-component"
@@ -64,6 +64,7 @@ const notePathName = ref()
 const noteInfo = ref()
 
 const showOutlineCard = ref()
+const showNoteSortInMobile = ref(false)
 const hideOutlineCardTimer = ref()
 
 const noteContentLoaded = ref(false)
@@ -132,6 +133,7 @@ const copyToast = () => {
 
 <style lang="less" scoped>
 @import url('../style/variables.less');
+@import url('../style/minxin.less');
 
 .note--tempalte {
   width: 100%;
@@ -193,6 +195,15 @@ const copyToast = () => {
           top: 50px;
           left: -35px;
 
+          .responsive(@h5, {
+            position: fixed;
+            left: 0;
+            width: 100vw;
+            overflow: auto
+          });
+
+          
+
           &--transition-enter-active, 
           &--transition-leave-active {
             transition: 0.3s ease;
@@ -218,6 +229,10 @@ const copyToast = () => {
         transition: .4s;
         cursor: pointer;
 
+        .responsive(@pc, {
+          display: none;
+        });
+
         &:hover {
           transform: translateX(-8px);
           fill: @Color[blue-light];
@@ -237,6 +252,20 @@ const copyToast = () => {
     .note-sort-container {
       flex-basis: 200px;
       flex-shrink: 0;
+
+      .responsive(@h5, {
+        position: absolute;
+        z-index: 1;
+        display: none;
+
+        &.show-in-mobile {
+          display: flex
+        }
+      });
+
+
+      
+
       
 
       .fixed-container {
@@ -247,6 +276,11 @@ const copyToast = () => {
         padding: 10px 10px 70px;
         border-right: 1px @Color[grey] solid;
         overflow-y: auto;
+
+        .responsive(@h5, {
+          background-color: #fff;
+        });
+        
         
         .note-sort-component {
           animation-name: mountNoteSort;
@@ -262,12 +296,14 @@ const copyToast = () => {
       padding: 20px 280px 200px 60px;
       animation-name: updateNoteContent;
       animation-duration: 1.2s;
+
+      .responsive(@h5, {
+        min-width: 0;
+        padding: 10px 15px 200px;
+      });
     }
 
     .note-navbar-container {
-      @media screen and (max-width: 950px){
-        display: none;
-      }
       position: fixed;
       top: 60px;
       right: 20px;
@@ -275,6 +311,9 @@ const copyToast = () => {
       animation-name: mountNoteNavbar;
       animation-duration: 1.2s;
       
+      .responsive(@h5, {
+        display: none
+      });
     }
   }
 }

@@ -41,7 +41,7 @@ html, body {
 }
 &::-webkit-scrollbar {
     width: 2px;
-    height: 8px;
+    height: 3px;
     border-radius: 8px;
     background-color: transparent;
   }
