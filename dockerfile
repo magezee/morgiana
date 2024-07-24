@@ -2,6 +2,7 @@
 FROM node:latest as build
 WORKDIR /app
 COPY . *.json ./
+RUN npm config set registry https://registry.npmmirror.com  
 RUN npm install
 COPY . .
 RUN npm run update
