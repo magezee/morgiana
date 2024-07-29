@@ -401,6 +401,13 @@ export const outline = [
           pathName: "front--react--code--hook",
           notePath: "[1][前端][front]/[5][React][react]/[2][编程][code]/[2-1][Hook][hook].vue"
         },
+        {
+          desc: "状态管理",
+          id: "state-manager",
+          number: "2-2",
+          pathName: "front--react--code--state-manager",
+          notePath: "[1][前端][front]/[5][React][react]/[2][编程][code]/[2-2][状态管理][state-manager].vue"
+        },
         ]
       },
       {
@@ -414,6 +421,13 @@ export const outline = [
           number: "3-1",
           pathName: "front--react--ecology--route",
           notePath: "[1][前端][front]/[5][React][react]/[3][生态][ecology]/[3-1][路由][route].vue"
+        },
+        {
+          desc: "Redux",
+          id: "redux",
+          number: "3-2",
+          pathName: "front--react--ecology--redux",
+          notePath: "[1][前端][front]/[5][React][react]/[3][生态][ecology]/[3-2][Redux][redux].vue"
         },
         ]
       },

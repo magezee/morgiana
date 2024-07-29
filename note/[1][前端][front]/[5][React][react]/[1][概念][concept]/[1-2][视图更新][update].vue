@@ -22,14 +22,7 @@
   <Line></Line>
 
   <Title>##生命周期</Title>
-  <Text>虽然函数式组件没有生命周期钩子，但是有对应的 hook 可以模拟这个过程，即</Text>
-  <Api>
-    @api - useEffect(callback, deps?)
-    @desc - 一个内置的 hook，可用于处理组件副作用，模拟生命周期
-    @params - [callback : () => void] 副作用函数，在组件挂载时会执行，如果没有`deps`限制，在组件每次更新时也会执行，该方法可以返回一个清除函数，此函数会在组件卸载或副作用函数重新执行前调用
-    @params - [deps? : any[ ]] 仅数组内指定的任一数据发生更新时，组件更新时`callback`才会执行，如果仅在组件挂载时执行副作用函数可以传入一个空数组
-    @return - [undefined] 
-  </Api>
+  <Text>虽然函数式组件没有生命周期钩子，但是有对应的 hook 可以模拟这个过程，即[useEffect](/note/front--react--code--hook#anchor-4)</Text>
   <Code>{{`
     ---tsx(useEffect)
       function App() {
@@ -87,13 +80,7 @@
   <Line></Line>
 
   <Title>###state</Title>
-  <Text>state 的核心概念是不可变性，即需要更新组件状态时，不可以直接修改当前的 state 对象而应借助官方的方法：</Text>
-  <Api>
-    @api - useState(defauleValue)
-    @desc - 用于生成组件的 state 对象
-    @params - [defauleValue : any | () => any] 初始状态值，可以声明为一个回调函数并返回默认值
-    @return - [[state, dispatchState]] 返回一个数组，第一个元素为当 state 值，第二个元素为更改 state 的方法
-  </Api>
+  <Text>state 的核心概念是不可变性，即需要更新组件状态时，不可以直接修改当前的 state 对象而应借助官方方法[useState](/note/front--react--code--hook#anchor-6)</Text>
   <Quote>为了遵循不可变原则，当 state 为对象或数组时，应该重新赋值为新的对象或数组，而不是修改原始内容</Quote>
   <List></List>
   <Code>{{`

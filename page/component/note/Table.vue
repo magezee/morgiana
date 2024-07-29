@@ -95,9 +95,13 @@ onMounted(async () => {
   margin: 15px 0;
   font-family: SourceHanSansSubset;
   color: @Color[mono-v2];
+  overflow-x: auto;
   
   
   .table-desc {
+    position: sticky;
+    left: 0;
+    right: 0;
     padding: 4px 0;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;

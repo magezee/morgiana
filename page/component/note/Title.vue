@@ -1,6 +1,6 @@
 <template>
   <div 
-    :class="`note--title rank${rank}`" 
+    :class="[`note--title rank${rank}`, { 'hide': props.hide }]" 
     :data-hashId="title"
   >
     <slot v-if="false"></slot>
@@ -10,6 +10,10 @@
 
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
+
+const props = defineProps<{
+  hide?: boolean
+}>()
 
 const rank = ref(1)
 const title = ref('')
@@ -37,6 +41,11 @@ onMounted(() => {
   font-weight: 600;
   line-height: 1.4;
 
+  &.hide {
+    opacity: 0;
+    height: 0;
+    margin: 0;
+  }
 
   &.rank1 {
     font-size: 2em;
