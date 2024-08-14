@@ -1,6 +1,6 @@
 <template>
-  <Tip>最后更新 - 2024.00.00</Tip>
-  <Title>#原理</Title>
+  <Tip>最后更新 - 2024.07.29</Tip>
+  <Title>#启动</Title>
   <Text>待补充</Text>
   <Line></Line>
 </template>
@@ -13,6 +13,7 @@ const emits = defineEmits([ 'noteContentMounted' ])
 onMounted(() => {
   emits('noteContentMounted')
 })
+
 
 </script>
 

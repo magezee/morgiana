@@ -433,6 +433,75 @@ export const outline = [
       },
       ]
     },
+    {
+      desc: "面经",
+      id: "interview",
+      list: [
+      {
+        desc: "概念相关",
+        id: "concept",
+        number: "1",
+        source: [
+        {
+          desc: "node",
+          id: "node",
+          number: "1-1",
+          pathName: "front--interview--concept--node",
+          notePath: "[1][前端][front]/[6][面经][interview]/[1][概念相关][concept]/[1-1][node][node].vue"
+        },
+        {
+          desc: "React",
+          id: "react",
+          number: "1-2",
+          pathName: "front--interview--concept--react",
+          notePath: "[1][前端][front]/[6][面经][interview]/[1][概念相关][concept]/[1-2][React][react].vue"
+        },
+        {
+          desc: "Vue",
+          id: "vue",
+          number: "1-3",
+          pathName: "front--interview--concept--vue",
+          notePath: "[1][前端][front]/[6][面经][interview]/[1][概念相关][concept]/[1-3][Vue][vue].vue"
+        },
+        ]
+      },
+      {
+        desc: "代码相关",
+        id: "code",
+        number: "2",
+        source: [
+        {
+          desc: "字符串",
+          id: "string",
+          number: "2-1",
+          pathName: "front--interview--code--string",
+          notePath: "[1][前端][front]/[6][面经][interview]/[2][代码相关][code]/[2-1][字符串][string].vue"
+        },
+        {
+          desc: "数组",
+          id: "array",
+          number: "2-2",
+          pathName: "front--interview--code--array",
+          notePath: "[1][前端][front]/[6][面经][interview]/[2][代码相关][code]/[2-2][数组][array].vue"
+        },
+        {
+          desc: "对象",
+          id: "object",
+          number: "2-3",
+          pathName: "front--interview--code--object",
+          notePath: "[1][前端][front]/[6][面经][interview]/[2][代码相关][code]/[2-3][对象][object].vue"
+        },
+        {
+          desc: "异步",
+          id: "async",
+          number: "2-4",
+          pathName: "front--interview--code--async",
+          notePath: "[1][前端][front]/[6][面经][interview]/[2][代码相关][code]/[2-4][异步][async].vue"
+        },
+        ]
+      },
+      ]
+    },
     ]
   },
   {
@@ -756,11 +825,18 @@ export const outline = [
         number: "2",
         source: [
         {
-          desc: "原理",
-          id: "theory",
+          desc: "开始",
+          id: "start",
           number: "1-1",
-          pathName: "fun--interest--qq-bot--theory",
-          notePath: "[4][好玩的][fun]/[2][整活][interest]/[2][QQ机器人][qq-bot]/[1-1][原理][theory].vue"
+          pathName: "fun--interest--qq-bot--start",
+          notePath: "[4][好玩的][fun]/[2][整活][interest]/[2][QQ机器人][qq-bot]/[1-1][开始][start].vue"
+        },
+        {
+          desc: "插件",
+          id: "plugin",
+          number: "1-2",
+          pathName: "fun--interest--qq-bot--plugin",
+          notePath: "[4][好玩的][fun]/[2][整活][interest]/[2][QQ机器人][qq-bot]/[1-2][插件][plugin].vue"
         },
         ]
       },
