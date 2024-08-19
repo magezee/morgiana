@@ -346,6 +346,13 @@ export const outline = [
           pathName: "front--browser--request--theory",
           notePath: "[1][前端][front]/[4][浏览器][browser]/[1][请求][request]/[1-1][原理][theory].vue"
         },
+        {
+          desc: "结构",
+          id: "structure",
+          number: "1-2",
+          pathName: "front--browser--request--structure",
+          notePath: "[1][前端][front]/[4][浏览器][browser]/[1][请求][request]/[1-2][结构][structure].vue"
+        },
         ]
       },
       {

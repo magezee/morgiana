@@ -29,7 +29,7 @@
         <div class="scroll-container">
           <RouterView></RouterView>
         </div>
-        <div class="record">Copyright ©2024 桂ICP备2021005699号-2</div>
+        <div class="record" @click="jumpRecord">Copyright ©2024 桂ICP备2021005699号-2</div>
       </ShowcaseCard>
       
       <div class="home-container--right">
@@ -70,8 +70,11 @@ onMounted(() => {
   setTimeout(() => {
     delayShow.value = true    // 防止部分dom未加载完即显示，视觉效果很差
   }, 30)
-  
 })
+
+const jumpRecord = () => {
+  window.open('https://beian.miit.gov.cn/')
+}
 
 </script>
 
@@ -211,6 +214,7 @@ onMounted(() => {
         text-align: center;
         color: @Color[mono-v3];
         transform: translateX(-50%);
+        cursor: pointer;
 
         .responsive(@h5, {
           display: none;

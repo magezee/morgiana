@@ -1,5 +1,5 @@
 <template>
-  <Tip>最后更新 - 2024.07.12</Tip>
+  <Tip>最后更新 - 2024.08.16</Tip>
   <Title>#类型</Title>
   <Text>声明类型的方式有`type`和`interface`两种</Text>
   <List>当需要做类型处理运算时, 使用`type`</List>
@@ -55,6 +55,30 @@
       (marisue.specialty as string[]).push('sing', 'running') 
     ---  
   `}}</Code>
+  <Line></Line>
+  <Title>###任意类型</Title>
+  <Text>在 ts 中，有两种类型可以表示任意类型，即`any`和`unkonw`，它们在类型检查和使用方面各不相同</Text>
+  <List>赋值：`any`可以赋值给任意类型变量或被赋值，而`unkonw`可以被赋值给另一个`any/unkonw`类型，不能直接赋值给其他具体类型，除非经过类型检查或断言</List>
+  <List>检查：`any`允许任何操作，例如调用一个不存在的方法，而对`unkonw`进行操作之前需要将其缩小到更具体的类型，可以通过类型保护（如`typeof`或`instanceof`）或类型断言`as`来实现</List>
+  <Code>{{`
+    ---ts(任意类型的区别)
+      let anyValue: any
+      let unknownValue: unknown 
+
+      // 使用 any 类型  
+      anyValue = 5
+      anyValue.toUpperCase()            // 运行时可能出错，但编译时不报错  
+
+      // 使用 unknown 类型  
+      unknownValue = "Hello"  
+      // unknownValue.toUpperCase()     // 编译时报错，需要类型检查  
+
+      if (typeof unknownValue === "string") {  
+          unknownValue.toUpperCase()    // 类型缩小后，编译通过  
+      }
+    ---
+  `}}</Code>
+
   <Line></Line>
 
   <Title>##泛型</Title>

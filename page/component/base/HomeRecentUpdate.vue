@@ -35,6 +35,27 @@ const updateList = [
     name: '【笔记】集成部署',
     route: '/note/server--deploy-site--cicd--desc'
   },
+  {
+    id: '3',
+    name: '【笔记】JS相关',
+    route: '/note/front--js--env--context'
+  },
+  {
+    id: '4',
+    name: '【笔记】React',
+    route: '/note/front--react--concept--desc'
+  },
+  {
+    id: '5',
+    name: '【笔记】面经',
+    route: '/note/front--interview--concept--node'
+  },
+  {
+    id: '6',
+    name: '【笔记】浏览器相关',
+    route: 'note/front--browser--request--theory'
+  },
+  
 ]
 
 const jumpRoute = (route) => {
